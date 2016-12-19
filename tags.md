@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Tags"
-description: "tags"  
+description: "哈哈，你找到了我的文章基因库"  
 header-img: "img/semantic.jpg"  
 ---
 
@@ -12,7 +12,7 @@ header-img: "img/semantic.jpg"
 3. 相关的文章会「唰」地一声跳到页面顶端
 4. 马上试试？
 
-##基因列表(什么是基因列表)
+##基因列表
 
 
 <div id='tag_cloud'>
