@@ -11,8 +11,8 @@ header-img: "img/green.jpg"
 </center>
 
 我是Tony,一名大二的学生，爱好广泛却无一精。时而学得废寝忘食，时而懒得不做作业。 <br>
-欢迎访问我的csdn主页:)[<font color=#7FFF00 size=36>点击这里</font>](http://my.csdn.net/my/mycsdn)<br>
-噢，还有我的gayhub [<font color=#7FFF00 size=36>点击这里</font>](https://github.com/dogloving)
+欢迎访问我的csdn主页 <a href="http://my.csdn.net/my/mycsdn" style="color:#00ff00">点击这里</a><br>
+噢，还有我的gayhub <a href="https://github.com/dogloving" style="color:#00ff00">点击这里</a>
 
 
 
