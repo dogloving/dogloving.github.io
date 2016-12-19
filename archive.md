@@ -2,7 +2,7 @@
 layout: page
 title: "Archive"
 description: "我的文章"
-header-img: "img/orange.jpg"
+header-img: "img/dog.jpg"
 ---
 
 

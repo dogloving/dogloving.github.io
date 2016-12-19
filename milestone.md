@@ -2,7 +2,7 @@
 layout: page
 title: "milestone"
 description: "我也不知道这是什么，但总觉得要有"
-header-img: "img/zhihu.jpg"
+header-img: "img/dog.jpg"
 ---
 
 
