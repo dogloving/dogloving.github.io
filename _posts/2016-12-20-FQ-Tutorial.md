@@ -6,8 +6,6 @@ categories: blog
 tags: [教程,科学上网]
 ---
 
-# fq教程
-
 
 最近在github上看到一个fq工具，觉得非常好用，就在这里分享下。
 首先下载地址[点击这里下载](https://github.com/guoruibiao/crosswall/raw/master/res/crowall.rar)。这里我要说下这个程序原理了,下面是程序源代码：
