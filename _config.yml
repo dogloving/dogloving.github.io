@@ -4,7 +4,7 @@ header-img: "img/dog.jpg"
 tagline: "cn"  
 description: "Tony|记录生活"  
 baseurl: ""
-url: "https://dogloving.github.io"  
+url: "http://dogloving.github.io"  
 
 # About/contact
 owner: 
