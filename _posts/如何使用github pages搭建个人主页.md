@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 如何使用github pages搭建个人主页
+title: 如何使用github pages搭建个人博客
 date: 2016-12-20
 categories: blog
 ---
