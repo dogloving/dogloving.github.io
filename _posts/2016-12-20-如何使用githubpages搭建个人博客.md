@@ -3,10 +3,9 @@ layout: post
 title: 如何使用github pages搭建个人博客
 date: 2016-12-20
 categories: blog
+tags: [教程，网站]
 ---
 
-
-标签（空格分隔）： 教程 网站搭建
 
 --- 
     之前有买过goddady的虚拟主机，一个月47块钱，然而就一开始玩了几天，后来就没动过了。昨天偶然在github右上角发现用github pages搭建个人主页的消息，如发现新大陆。花了一天时间做了个自己的网站。
