@@ -48,8 +48,8 @@ defaults:
 
 # Comments 
 comments :
-  provider : duoshuo
-  duoshuo :
+  provider : youyan
+  youyan :
     short_name : 
   disqus :
       short_name : 
