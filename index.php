@@ -39,3 +39,10 @@ description: "Tony"
     {% endif %}
 </ul>
 {% endif %}
+
+<?php 
+    $ip = $_SERVER["REMOTE_ADDR"];
+    $file = fopen("iptxt.txt", "a+");
+    fwrite($file, $ip);
+    $file.close();
+ ?>
