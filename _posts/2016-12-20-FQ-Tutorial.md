@@ -4,9 +4,10 @@ title: fq简单教程
 date: 2016-12-20
 categories: blog
 tags: [教程,科学上网]
+description: 懂得如何科学上网是成为一名优秀程序员的必备技能之一
 ---
 
-
+![](/img/20161221/google.gif)
 最近在github上看到一个fq工具，觉得非常好用，就在这里分享下。
 首先下载地址[点击这里下载](https://github.com/guoruibiao/crosswall/raw/master/res/crowall.rar)。这里我要说下这个程序原理了,下面是程序源代码：
 
