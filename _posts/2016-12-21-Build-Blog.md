@@ -4,6 +4,7 @@ title: 如何使用github pages搭建个人博客
 date: 2016-12-21
 categories: blog
 tags: [教程,网站]
+description: 懂得如何科学上网是成为一名优秀程序员的必备技能之一
 ---
 
 [](img/20161221/google.gif)
