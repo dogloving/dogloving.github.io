@@ -1,12 +1,13 @@
 ﻿---
 layout: post
-title: 如何使用github pages搭建个人博客
+title: 如何搭建个人博客
 date: 2016-12-21
 categories: blog
-tags: [教程,网站]
+tags: [教程]
 ---
 
 > 好好学习，天天向上
+
 之前有买过godaddy的虚拟主机，一个月47块钱，然而就一开始玩了几天，后来就没动过了。昨天偶然在github右上角发现用github pages搭建个人主页的消息，如发现新大陆。花了一天时间做了个自己的网站。
 前期准备：有一个github的账号（如果没有去申请一个，免费的）；本地安装git（具体可参考[廖雪峰的git教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)）
 第一步：新建一个仓库，命名为*yourname.github.io*；
