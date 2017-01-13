@@ -1,16 +1,16 @@
 # Site settings
 title: Tony's Garden
-header-img: "img/dog.jpg"
+header-img: "img/green.jpg"
 tagline: "cn"  
-description: "Tony|记录生活"  
+description: ""  
 baseurl: ""
-url: "http://www.nkuhjp.top"  
+url: "http://dogloving"  
 
 # About/contact
 owner: 
   name: " Tony"
-  email: nkuhjp@163.com
-  bio: "思考让生活更有趣"
+  email: 1304272317@qq.com
+  bio: ""
 
 # Data
 gavatar: http://dreamofbook.qiniudn.com/Az..png
@@ -33,7 +33,7 @@ paginate: 8
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone: Asia/Tianjin
+timezone: Asia/Shanghai
 
 # Defaults for posts
 defaults:
@@ -48,8 +48,8 @@ defaults:
 
 # Comments 
 comments :
-  provider : youyan
-  youyan :
+  provider : duoshuo
+  duoshuo :
     short_name : 
   disqus :
       short_name : 
