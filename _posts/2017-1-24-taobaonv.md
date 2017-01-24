@@ -1,9 +1,10 @@
 ﻿---
 layout: post
 title: 用python爬取美女照片并分类
-date: 2015-3-02
+date: 2017-1-23
 categories: blog
 tags: [python,爬虫]
+description: 懂得如何科学上网是成为一名优秀程序员的必备技能之一
 ---
 
 # 乘客们请系好安全带，老司机要发车了
