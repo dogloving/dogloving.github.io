@@ -41,6 +41,9 @@ ENOENT: no such file or directory, open react-native 'C:\TDM-GCC-64\BIN;C:MINGW\
 ```
 心想这是啥玩意儿啊。去StackOverflow上也没找到答案。但是看这个貌似很熟悉的路径。打开环境变量，发现果然这三个是TEMP变量的路径。删掉这个路径，重新react-native run-android. nice! 完美运行!
 
+#第七步 配置地址和端口
+Dev Settings->Debug server host & port for device，本地的话输入127.0.0.1:8081
+
 # 改进
 根据官网的提示下载个[genymotion](https://www.genymotion.com/download/)，打开后Add一个合适的版本，这样就连Android Studio也不用开了。 nice!
 
