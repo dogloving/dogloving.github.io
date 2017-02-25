@@ -1,14 +1,14 @@
 ---
 layout: post
-title: JavascriptÖÐµÄ±Õ°ü
+title: Javascriptä¸­çš„é—­åŒ…
 date: 2017-2-13
 categories: blog
-tags: [Javascript,Ñ§Ï°±Ê¼Ç]
+tags: [Javascript,å­¦ä¹ ç¬”è®°]
 ---
 
 
-Ê×ÏÈÀ´Ë¼¿¼Ò»¸öÎÊÌâ£ºÈçºÎÍ³¼ÆÒ»¸öº¯Êýµ÷ÓÃÁË¼¸´Î£¿
-ÂíÉÏÏëµ½¶¨ÒåÒ»¸öÈ«¾Ö±äÁ¿£¬Ã¿µ±Õâ¸öº¯Êýµ÷ÓÃÒ»´Î¾Í½«±äÁ¿++£º
+é¦–å…ˆæ¥æ€è€ƒä¸€ä¸ªé—®é¢˜ï¼šå¦‚ä½•ç»Ÿè®¡ä¸€ä¸ªå‡½æ•°è°ƒç”¨äº†å‡ æ¬¡ï¼Ÿ
+é©¬ä¸Šæƒ³åˆ°å®šä¹‰ä¸€ä¸ªå…¨å±€å˜é‡ï¼Œæ¯å½“è¿™ä¸ªå‡½æ•°è°ƒç”¨ä¸€æ¬¡å°±å°†å˜é‡++ï¼š
 ```
 var count = 0;
 function foo(){
@@ -16,7 +16,7 @@ function foo(){
     alert(count);
 }
 ```
-ÄÇÃ´ÓÐÃ»ÓÐÆäËû·½·¨ÄØ£¿±Õ°üÍêÃÀµÄ½â¾öÁËÕâ¸öÎÊÌâ£º
+é‚£ä¹ˆæœ‰æ²¡æœ‰å…¶ä»–æ–¹æ³•å‘¢ï¼Ÿé—­åŒ…å®Œç¾Žçš„è§£å†³äº†è¿™ä¸ªé—®é¢˜ï¼š
 ```
 function foo1(){
 	var n = 0;
@@ -30,67 +30,67 @@ function foo1(){
 var x = foo1();
 x();
 ```
-Ê×ÏÈÁË½âÊ²Ã´ÊÇ±Õ°ü£º
+é¦–å…ˆäº†è§£ä»€ä¹ˆæ˜¯é—­åŒ…ï¼š
 
-> ±Õ°üÊÇÓÉº¯ÊýºÍÓëÆäÏà¹ØµÄÒýÓÃ»·¾³×éºÏ¶ø³ÉµÄÊµÌå¡£(Õª×ÔÎ¬»ù°Ù¿Æ)
+> é—­åŒ…æ˜¯ç”±å‡½æ•°å’Œä¸Žå…¶ç›¸å…³çš„å¼•ç”¨çŽ¯å¢ƒç»„åˆè€Œæˆçš„å®žä½“ã€‚(æ‘˜è‡ªç»´åŸºç™¾ç§‘)
 
-Æä×÷ÓÃ³ýÁËÄÜ¹»¶ÁÈ¡±¾Ó¦±»Òþ²ØµÄÆäËûº¯ÊýÄÚ²¿µÄ±äÁ¿Íâ£¬»¹ÄÜ½«ÕâÐ©±äÁ¿Ê¼ÖÕ±£´æÔÚÄÚ´æÖÐ¡£
-ÄÇÃ´ÎÒÃÇÒ²¿ÉÒÔ¿´³ö±Õ°üµÄÒ»¸öÈ±µã¾ÍÊÇÄÚ´æÏûºÄ´ó£¬ËùÒÔ²»ÒªÀÄÓÃ±Õ°ü¡£
-ÎÒÃÇÒ²¿ÉÒÔÕâÑùÀí½â£º±Õ°üÊÇÔÚº¯ÊýÄÚ²¿¶¨ÒåµÄ¡£ÎÒÃÇ½«Æä¸¸º¯ÊýÊÓ×÷Ò»¸ö¶ÔÏó£¬¸¸º¯ÊýÖÐ¶¨ÒåµÄ±äÁ¿ÊÓ×÷¶ÔÏóµÄË½ÓÐ³ÉÔ±£¬ÄÇÃ´±Õ°ü¿´×÷ÊÇ¶ÔÏóµÄ¹²ÓÐ·½·¨£¬ÊÇ±©Â¶³öÀ´µÄ½Ó¿Ú¡£
+å…¶ä½œç”¨é™¤äº†èƒ½å¤Ÿè¯»å–æœ¬åº”è¢«éšè—çš„å…¶ä»–å‡½æ•°å†…éƒ¨çš„å˜é‡å¤–ï¼Œè¿˜èƒ½å°†è¿™äº›å˜é‡å§‹ç»ˆä¿å­˜åœ¨å†…å­˜ä¸­ã€‚
+é‚£ä¹ˆæˆ‘ä»¬ä¹Ÿå¯ä»¥çœ‹å‡ºé—­åŒ…çš„ä¸€ä¸ªç¼ºç‚¹å°±æ˜¯å†…å­˜æ¶ˆè€—å¤§ï¼Œæ‰€ä»¥ä¸è¦æ»¥ç”¨é—­åŒ…ã€‚
+æˆ‘ä»¬ä¹Ÿå¯ä»¥è¿™æ ·ç†è§£ï¼šé—­åŒ…æ˜¯åœ¨å‡½æ•°å†…éƒ¨å®šä¹‰çš„ã€‚æˆ‘ä»¬å°†å…¶çˆ¶å‡½æ•°è§†ä½œä¸€ä¸ªå¯¹è±¡ï¼Œçˆ¶å‡½æ•°ä¸­å®šä¹‰çš„å˜é‡è§†ä½œå¯¹è±¡çš„ç§æœ‰æˆå‘˜ï¼Œé‚£ä¹ˆé—­åŒ…çœ‹ä½œæ˜¯å¯¹è±¡çš„å…±æœ‰æ–¹æ³•ï¼Œæ˜¯æš´éœ²å‡ºæ¥çš„æŽ¥å£ã€‚
 
-ÏÂÃæÊÇÁ½µÀË¼¿¼Ìâ£¬Ë¼¿¼ËûÃÇµÄÔËÐÐ½á¹û£º
+ä¸‹é¢æ˜¯ä¸¤é“æ€è€ƒé¢˜ï¼Œæ€è€ƒä»–ä»¬çš„è¿è¡Œç»“æžœï¼š
 P1:
 ```
 var name = "The Window";
-¡¡¡¡var object = {
-¡¡¡¡¡¡¡¡name : "My Object",
-¡¡¡¡¡¡¡¡getNameFunc : function(){
-¡¡¡¡¡¡¡¡¡¡¡¡return function(){
-¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡return this.name;
-¡¡¡¡¡¡¡¡¡¡¡¡};
-¡¡¡¡¡¡¡¡}
-¡¡¡¡};
-¡¡¡¡alert(object.getNameFunc()());
+ã€€ã€€var object = {
+ã€€ã€€ã€€ã€€name : "My Object",
+ã€€ã€€ã€€ã€€getNameFunc : function(){
+ã€€ã€€ã€€ã€€ã€€ã€€return function(){
+ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€return this.name;
+ã€€ã€€ã€€ã€€ã€€ã€€};
+ã€€ã€€ã€€ã€€}
+ã€€ã€€};
+ã€€ã€€alert(object.getNameFunc()());
 ```
-P2£º
+P2ï¼š
 ```
-¡¡var name = "The Window";
-¡¡¡¡var object = {
-¡¡¡¡¡¡¡¡name : "My Object",
-¡¡¡¡¡¡¡¡getNameFunc : function(){
-¡¡¡¡¡¡¡¡¡¡¡¡var that = this;
-¡¡¡¡¡¡¡¡¡¡¡¡return function(){
-¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡return that.name;
-¡¡¡¡¡¡¡¡¡¡¡¡};
-¡¡¡¡¡¡¡¡}
-¡¡¡¡};
-¡¡¡¡alert(object.getNameFunc()());
+ã€€var name = "The Window";
+ã€€ã€€var object = {
+ã€€ã€€ã€€ã€€name : "My Object",
+ã€€ã€€ã€€ã€€getNameFunc : function(){
+ã€€ã€€ã€€ã€€ã€€ã€€var that = this;
+ã€€ã€€ã€€ã€€ã€€ã€€return function(){
+ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€return that.name;
+ã€€ã€€ã€€ã€€ã€€ã€€};
+ã€€ã€€ã€€ã€€}
+ã€€ã€€};
+ã€€ã€€alert(object.getNameFunc()());
 ```
 
-¹«²¼´ð°¸£º  P1: The Window    P2: My Object
-×¢Òâ<b>thisµÄÖ¸ÏòÊÇÓÉËüËùÔÚº¯Êýµ÷ÓÃµÄÉÏÏÂÎÄ¾ö¶¨µÄ£¬¶ø²»ÊÇÓÉËüËùÔÚº¯Êý¶¨ÒåµÄÉÏÏÂÎÄ¾ö¶¨µÄ¡£</b>
-ËùÒÔµÚÒ»¸öthisÖ¸µÄÊÇwindow,µÚ¶þ¸öthis Ö¸µÄÊÇobject¡£
-Èç¹ûÎÒÃÇ½«P1ÖÐµÄ´úÂë¸Ä³É
+å…¬å¸ƒç­”æ¡ˆï¼š  P1: The Window    P2: My Object
+æ³¨æ„<b>thisçš„æŒ‡å‘æ˜¯ç”±å®ƒæ‰€åœ¨å‡½æ•°è°ƒç”¨çš„ä¸Šä¸‹æ–‡å†³å®šçš„ï¼Œè€Œä¸æ˜¯ç”±å®ƒæ‰€åœ¨å‡½æ•°å®šä¹‰çš„ä¸Šä¸‹æ–‡å†³å®šçš„ã€‚</b>
+æ‰€ä»¥ç¬¬ä¸€ä¸ªthisæŒ‡çš„æ˜¯window,ç¬¬äºŒä¸ªthis æŒ‡çš„æ˜¯objectã€‚
+å¦‚æžœæˆ‘ä»¬å°†P1ä¸­çš„ä»£ç æ”¹æˆ
 ```
 var name = "The Window";
-¡¡¡¡var object = {
-¡¡¡¡¡¡¡¡name : "My Object",
-¡¡¡¡¡¡¡¡getNameFunc : function(){
-¡¡¡¡¡¡¡¡¡¡¡¡//var that = this;
-¡¡¡¡¡¡¡¡¡¡¡¡return function(){
-¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡return this.name;
-¡¡¡¡¡¡¡¡¡¡¡¡};
-¡¡¡¡¡¡¡¡}
-¡¡¡¡};
+ã€€ã€€var object = {
+ã€€ã€€ã€€ã€€name : "My Object",
+ã€€ã€€ã€€ã€€getNameFunc : function(){
+ã€€ã€€ã€€ã€€ã€€ã€€//var that = this;
+ã€€ã€€ã€€ã€€ã€€ã€€return function(){
+ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€return this.name;
+ã€€ã€€ã€€ã€€ã€€ã€€};
+ã€€ã€€ã€€ã€€}
+ã€€ã€€};
 (function test(){
 	name = "test";
 	alert(object.getNameFunc()());
 })();
 ```
-ÄÇÃ´×îºóÊä³öµÄ½á¹ûÊÇ  test¡£
+é‚£ä¹ˆæœ€åŽè¾“å‡ºçš„ç»“æžœæ˜¯  testã€‚
 
 
-Ë¼¿¼ÌâPlus£º
+æ€è€ƒé¢˜Plusï¼š
 ```
 function buildList(list) {
     var result = [];
@@ -111,8 +111,8 @@ function testList() {
 
  testList() //logs "item2 undefined" 3 times
 ```
-ÊÔ×Å½«ÉÏÃæµÄ console.log(item + ' ' + list[i])  ¸Ä³É  console.log(i)¾ÍÄÜ¿´³öÎÊÌâÁË¡£
-[ÍØÕ¹ÔÄ¶Á](http://stackoverflow.com/questions/111102/how-do-javascript-closures-work)
+è¯•ç€å°†ä¸Šé¢çš„ console.log(item + ' ' + list[i])  æ”¹æˆ  console.log(i)å°±èƒ½çœ‹å‡ºé—®é¢˜äº†ã€‚
+[æ‹“å±•é˜…è¯»](http://stackoverflow.com/questions/111102/how-do-javascript-closures-work)
 
 
 

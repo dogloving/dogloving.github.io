@@ -1,43 +1,43 @@
 ---
 layout: post
-title: °²×°React-Native
+title: å®‰è£…React-Native
 date: 2017-2-25
 categories: blog
-tags: [¼ÇÂ¼]
+tags: [è®°å½•]
 ---
 
-Ö÷Òª²Î¿¼[React-Native¹Ù·½ÖĞÎÄÎÄµµ](https://reactnative.cn/docs/0.41/getting-started.html#content)¡£
-# µÚÒ»²½ ÏÂÔØNodejsºÍnpm
-[NodejsÏÂÔØµØÖ·](https://nodejs.org/download/release/v7.6.0/)
-[npmÏÂÔØµØÖ·](https://nodejs.org/dist/npm/)
-Ñ¡ÔñÊÊºÏ×Ô¼º°æ±¾µÄÏÂÔØ£¬Ã²ËÆ×îĞÂµÄNodejsÖĞÒÑ¾­ÓĞÁËnpm¡£Èç¹ûÔÚÓÃnpm°²×°Ä£¿éµÄÊ±ºò³öÏÖ´íÎó¶à°ëÊÇÒòÎªNodejs°æ±¾´íÎó¡£×¢Òâx64µÄµçÄÔÏÂÔØ64-bitµÄ£¬x86µÄµçÄÔÏÂÔØ32-bitµÄ¡£(https://nodejs.org/en/download/)
-Èç¹ûÊÇ·Ö¿ªÏÂÔØµÄ£¬°ÑnpmÎÄ¼ş¼Ğ·Åµ½C:\Program Files (x86)\nodejs\node_modulesÏÂ
-#µÚ¶ş²½ ÏÂÔØ°²×°JDK
-ÏÖÔÚCMDÖĞÊäÈëjava -version¿ÉÒÔ²é¿´ÓĞÃ»ÓĞ°²×°¹ıJDK¡£Èç¹ûÃ»ÓĞµÄ»°£¬È¥[¹ÙÍø](http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html)ÏÂÔØÒ»¸ö1.8°æ±¾µÄ¡£È»ºó½«Â·¾¶Ìí¼Óµ½»·¾³±äÁ¿¡£
-#µÚÈı²½ ÏÂÔØAndroid SDKºÍ°²×°Android Studio
-[Andriod StudioÏÂÔØµØÖ·](https://developer.android.com/studio/index.html#downloads)
-Èç¹ûÏÂÔØµÄAndroid StudioÃ»ÓĞ×Ô´øSDK£¬ÄÇÃ´ÏÂÔØµØÖ·µÄ×îÏÂÃæÊÇ´¿SDK¡£
-°²×°Android StudioµÄÊ±ºò×¢Òâ²»ÒªÔÚÂ·¾¶ÖĞ´øÓĞÖĞÎÄ£¬Õâµã·Ç³£ÖØÒª¡£
-#µÚËÄ²½  °´ÕÕ¹ÙÍø½Ì²ÄÅäÖÃAndroid Studio
-ÂÔ
-#µÚÎå²½ °²×°React-Native
-CMDÖĞÊäÈë(×îºÃÔÚ¹ÜÀíÔ±Éí·İ´ò¿ª)npm install -g react-native-cli¡££¨»°ËµnpmÕæÊÇ¸öºÃ¶«Î÷£©¡£
-#µÚÁù²½ ³¢ÊÔÔËĞĞ
-Ê×ÏÈ´ò¿ªAndroid StudioÄ£ÄâÆ÷£¨Ò»¶¨ÒªÏÈ¿ªÆôÄ£ÄâÆ÷²¢¿ª»ú£©
-È»ºóÑ¡ÔñÒ»¸öÄ¿Â¼ÏÂÊäÈë
+ä¸»è¦å‚è€ƒ[React-Nativeå®˜æ–¹ä¸­æ–‡æ–‡æ¡£](https://reactnative.cn/docs/0.41/getting-started.html#content)ã€‚
+# ç¬¬ä¸€æ­¥ ä¸‹è½½Nodejså’Œnpm
+[Nodejsä¸‹è½½åœ°å€](https://nodejs.org/download/release/v7.6.0/)
+[npmä¸‹è½½åœ°å€](https://nodejs.org/dist/npm/)
+é€‰æ‹©é€‚åˆè‡ªå·±ç‰ˆæœ¬çš„ä¸‹è½½ï¼Œè²Œä¼¼æœ€æ–°çš„Nodejsä¸­å·²ç»æœ‰äº†npmã€‚å¦‚æœåœ¨ç”¨npmå®‰è£…æ¨¡å—çš„æ—¶å€™å‡ºç°é”™è¯¯å¤šåŠæ˜¯å› ä¸ºNodejsç‰ˆæœ¬é”™è¯¯ã€‚æ³¨æ„x64çš„ç”µè„‘ä¸‹è½½64-bitçš„ï¼Œx86çš„ç”µè„‘ä¸‹è½½32-bitçš„ã€‚(https://nodejs.org/en/download/)
+å¦‚æœæ˜¯åˆ†å¼€ä¸‹è½½çš„ï¼ŒæŠŠnpmæ–‡ä»¶å¤¹æ”¾åˆ°C:\Program Files (x86)\nodejs\node_modulesä¸‹
+#ç¬¬äºŒæ­¥ ä¸‹è½½å®‰è£…JDK
+ç°åœ¨CMDä¸­è¾“å…¥java -versionå¯ä»¥æŸ¥çœ‹æœ‰æ²¡æœ‰å®‰è£…è¿‡JDKã€‚å¦‚æœæ²¡æœ‰çš„è¯ï¼Œå»[å®˜ç½‘](http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html)ä¸‹è½½ä¸€ä¸ª1.8ç‰ˆæœ¬çš„ã€‚ç„¶åå°†è·¯å¾„æ·»åŠ åˆ°ç¯å¢ƒå˜é‡ã€‚
+#ç¬¬ä¸‰æ­¥ ä¸‹è½½Android SDKå’Œå®‰è£…Android Studio
+[Andriod Studioä¸‹è½½åœ°å€](https://developer.android.com/studio/index.html#downloads)
+å¦‚æœä¸‹è½½çš„Android Studioæ²¡æœ‰è‡ªå¸¦SDKï¼Œé‚£ä¹ˆä¸‹è½½åœ°å€çš„æœ€ä¸‹é¢æ˜¯çº¯SDKã€‚
+å®‰è£…Android Studioçš„æ—¶å€™æ³¨æ„ä¸è¦åœ¨è·¯å¾„ä¸­å¸¦æœ‰ä¸­æ–‡ï¼Œè¿™ç‚¹éå¸¸é‡è¦ã€‚
+#ç¬¬å››æ­¥  æŒ‰ç…§å®˜ç½‘æ•™æé…ç½®Android Studio
+ç•¥
+#ç¬¬äº”æ­¥ å®‰è£…React-Native
+CMDä¸­è¾“å…¥(æœ€å¥½åœ¨ç®¡ç†å‘˜èº«ä»½æ‰“å¼€)npm install -g react-native-cliã€‚ï¼ˆè¯è¯´npmçœŸæ˜¯ä¸ªå¥½ä¸œè¥¿ï¼‰ã€‚
+#ç¬¬å…­æ­¥ å°è¯•è¿è¡Œ
+é¦–å…ˆæ‰“å¼€Android Studioæ¨¡æ‹Ÿå™¨ï¼ˆä¸€å®šè¦å…ˆå¼€å¯æ¨¡æ‹Ÿå™¨å¹¶å¼€æœºï¼‰
+ç„¶åé€‰æ‹©ä¸€ä¸ªç›®å½•ä¸‹è¾“å…¥
 <code>
 react-native init AwesomeProject
 cd AwesomeProject
 react-native run-android
 </code>
-Èç¹ûÕâÊ±ºòÄÜ¹»ÍêÃÀÔËĞĞ£¬ÄÇ¾ÍĞ»ÌìĞ»µØÁË¡£ËµÃ÷ÈËÆ·ºÜºÃ¡£ÎÒµ±Ê±Óöµ½µÄÒ»¸ö±¨´íÊÇ
+å¦‚æœè¿™æ—¶å€™èƒ½å¤Ÿå®Œç¾è¿è¡Œï¼Œé‚£å°±è°¢å¤©è°¢åœ°äº†ã€‚è¯´æ˜äººå“å¾ˆå¥½ã€‚æˆ‘å½“æ—¶é‡åˆ°çš„ä¸€ä¸ªæŠ¥é”™æ˜¯
 ```
 ENOENT: no such file or directory, open react-native 'C:\TDM-GCC-64\BIN;C:MINGW\BIN;C:User\AppData\Local\Temp'
 ```
-ĞÄÏëÕâÊÇÉ¶ÍæÒâ¶ù°¡¡£È¥StackOverflowÉÏÒ²Ã»ÕÒµ½´ğ°¸¡£µ«ÊÇ¿´Õâ¸öÃ²ËÆºÜÊìÏ¤µÄÂ·¾¶¡£´ò¿ª»·¾³±äÁ¿£¬·¢ÏÖ¹ûÈ»ÕâÈı¸öÊÇTEMP±äÁ¿µÄÂ·¾¶¡£É¾µôÕâ¸öÂ·¾¶£¬ÖØĞÂreact-native run-android. nice! ÍêÃÀÔËĞĞ!
+å¿ƒæƒ³è¿™æ˜¯å•¥ç©æ„å„¿å•Šã€‚å»StackOverflowä¸Šä¹Ÿæ²¡æ‰¾åˆ°ç­”æ¡ˆã€‚ä½†æ˜¯çœ‹è¿™ä¸ªè²Œä¼¼å¾ˆç†Ÿæ‚‰çš„è·¯å¾„ã€‚æ‰“å¼€ç¯å¢ƒå˜é‡ï¼Œå‘ç°æœç„¶è¿™ä¸‰ä¸ªæ˜¯TEMPå˜é‡çš„è·¯å¾„ã€‚åˆ æ‰è¿™ä¸ªè·¯å¾„ï¼Œé‡æ–°react-native run-android. nice! å®Œç¾è¿è¡Œ!
 
-#¸Ä½ø
-¸ù¾İ¹ÙÍøµÄÌáÊ¾ÏÂÔØ¸ö[genymotion](https://www.genymotion.com/download/)£¬´ò¿ªºóAddÒ»¸öºÏÊÊµÄ°æ±¾£¬ÕâÑù¾ÍÁ¬Android StudioÒ²²»ÓÃ¿ªÁË¡£ nice!
+#æ”¹è¿›
+æ ¹æ®å®˜ç½‘çš„æç¤ºä¸‹è½½ä¸ª[genymotion](https://www.genymotion.com/download/)ï¼Œæ‰“å¼€åAddä¸€ä¸ªåˆé€‚çš„ç‰ˆæœ¬ï¼Œè¿™æ ·å°±è¿Android Studioä¹Ÿä¸ç”¨å¼€äº†ã€‚ nice!
 
-#×Ü½á
-½²µÀÀí£¬ÒªÍê³ÉÒÔÉÏÕâĞ©²½Öè×îºÃ»¹ÊÇÓĞÀÏË¾»ú´ø×Å£¬²»È»Åª¸öÒ»Á½Ìì¶¼Íê²»³É£¬Åöµ½ÎÊÌâÒ²²»ÖªµÀ¸ÃÔõÃ´°ì¡£Ïà±ÈÖ®ÏÂ£¬react.jsµÄ°²×°ÒªÈİÒ×µÃ¶àÁË¡£
+#æ€»ç»“
+è®²é“ç†ï¼Œè¦å®Œæˆä»¥ä¸Šè¿™äº›æ­¥éª¤æœ€å¥½è¿˜æ˜¯æœ‰è€å¸æœºå¸¦ç€ï¼Œä¸ç„¶å¼„ä¸ªä¸€ä¸¤å¤©éƒ½å®Œä¸æˆï¼Œç¢°åˆ°é—®é¢˜ä¹Ÿä¸çŸ¥é“è¯¥æ€ä¹ˆåŠã€‚ç›¸æ¯”ä¹‹ä¸‹ï¼Œreact.jsçš„å®‰è£…è¦å®¹æ˜“å¾—å¤šäº†ã€‚
