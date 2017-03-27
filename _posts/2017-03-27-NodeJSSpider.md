@@ -4,7 +4,6 @@ title: NodeJS爬虫
 date: 2017-03-27
 categories: blog
 tags: [记录]
-
 ---
 
 因为D类课大作业需要用到NodeJS爬虫的缘故，所以学了一下怎么用NodeJS爬虫，虽然用着没有Python爽，但是也还不错。今天试着用NodeJS爬了社区评论，发现并没有相像中的那么简单。下面通过代码来回顾一下几个坑点吧：
