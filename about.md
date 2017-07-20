@@ -10,7 +10,7 @@ header-img: "img/dog.jpg"
     <p><img src="http://7xlfkx.com1.z0.glb.clouddn.com/white2.jpg" align="center"></p>
 </center>
 
-欢迎访问我的githubddd <a href="https://github.com/dogloving" style="color:#00ff00">点击这里</a>
+欢迎访问我的github <a href="https://github.com/dogloving" style="color:#00ff00">点击这里</a>
 
 
 
