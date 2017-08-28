@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+<script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+<script>AV.initialize("n9H2t3VFwwMPqC0rSYfvlJuu-gzGzoHsz", "DkeWUHsd9YIYIsnKRg6vw1Lk");</script>
+<!--<script>console.log("Error: " + error.code + " " + error.message);</script>-->
+<script>
+    function showHitCount(Counter) {
+        console.log("i was called");
+        var query = new AV.Query(Counter);
+        var entries = [];
+        var $visitors = $(".leancloud_visitors");
+        $visitors.each(function () {
+            entries.push( $(this).attr("id").trim() );
+        });
+        query.containedIn('url', entries);
+        query.find()
+                .done(function (results) {
+                    console.log("results",results);
+                    var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+                    if (results.length === 0) {
+                        $visitors.find(COUNT_CONTAINER_REF).text(0);
+                        return;
+                    }
+                    for (var i = 0; i < results.length; i++) {
+                        var item = results[i];
+                        var url = item.get('url');
+                        var hits = item.get('hits');
+                        var element = document.getElementById(url);
+                        $(element).find(COUNT_CONTAINER_REF).text(hits);
+                    }
+                    for(var i = 0; i < entries.length; i++) {
+                        var url = entries[i];
+                        var element = document.getElementById(url);
+                        var countSpan = $(element).find(COUNT_CONTAINER_REF);
+                        if( countSpan.text() == '') {
+                            countSpan.text(0);
+                        }
+                    }
+                })
+                .fail(function (object, error) {
+                    console.log("Error: " + error.code + " " + error.message);
+                });
+    }
+    function addCount(Counter) {
+        var $visitors = $(".leancloud_visitors");
+        var url = $visitors.attr('id').trim();
+        var title = $visitors.attr('data-flag-title').trim();
+        var query = new AV.Query(Counter);
+        query.equalTo("url", url);
+        query.find({
+            success: function(results) {
+                if (results.length > 0) {
+                    var counter = results[0];
+                    counter.fetchWhenSave(true);
+                    counter.increment("hits");
+                    counter.save(null, {
+                        success: function(counter) {
+                            var $element = $(document.getElementById(url));
+                            $element.find('.leancloud-visitors-count').text(counter.get('hits'));
+                        },
+                        error: function(counter, error) {
+                            console.log('Failed to save Visitor num, with error message: ' + error.message);
+                        }
+                    });
+                } else {
+                    var newcounter = new Counter();
+                    /* Set ACL */
+                    var acl = new AV.ACL();
+                    acl.setPublicReadAccess(true);
+                    acl.setPublicWriteAccess(true);
+                    newcounter.setACL(acl);
+                    /* End Set ACL */
+                    newcounter.set("title", title);
+                    newcounter.set("url", url);
+                    newcounter.set("hits", 1);
+                    newcounter.save(null, {
+                        success: function(newcounter) {
+                            var $element = $(document.getElementById(url));
+                            $element.find('.leancloud-visitors-count').text(newcounter.get('hits'));
+                        },
+                        error: function(newcounter, error) {
+                            console.log('Failed to create');
+                        }
+                    });
+                }
+            },
+            error: function(error) {
+                console.log('Error:' + error.code + " " + error.message);
+            }
+        });
+    }
+    $(function() {
+        var Counter = AV.Object.extend("Counter");
+        console.log('this is a test');
+        console.log('this is a test-add',$('.leancloud_visitors'));
+        console.log('this is a test-show',$('.post-link'));
+        if ($('.leancloud_visitors').length == 1) {
+            // in post.html, so add 1 to hit counts
+            addCount(Counter);
+        } else if ($('.post-link').length > 1){
+            // in index.html, there are many 'leancloud_visitors' and 'post-link', so just show hit counts.
+            showHitCount(Counter);
+        }
+    });
+</script>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+
+
+    <!--友言-->
+    <meta name="uyan_auth" content="2a3762da1e" />
+
+    <title>WSL---在Windows下也能使用Linux - Tony's Garden</title>
+
+    <link rel="canonical" href="http://dogloving/blog/2017/07/22/WSL/">
+
+    <!-- Icons -->
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/clean-blog.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+	
+	<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	
+	<!-- jQuery -->
+	<script src="//cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+
+
+
+
+
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Tony's Garden</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">首页</a>
+                </li>
+                
+                <li>
+                    <a href="/about/">关于</a>
+                </li>
+                
+                <li>
+                    <a href="/archive/">所有文章</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('/img/background.jpg')
+    }
+</style>
+<header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="Tags">
+                        
+                        <a class="tag" href="/Tags/#教程" title="教程">教程</a>
+                        
+                    </div>
+                    <h1>WSL---在Windows下也能使用Linux</h1>
+                    
+                    <span class="meta">Posted by Tony on July 22, 2017</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-container">
+
+                <p>​	今天发现了一个很好玩的东西——<em>WSL(Windows Subsystem Linux)</em>，是个能在不安装双系统和虚拟机的情况下使用<em>Linux</em>的东西。废话少说，直接上图：</p>
+
+<p><img src="https://raw.githubusercontent.com/dogloving/dogloving.github.io/master/img/20170722/bash.png" alt="" /></p>
+
+<p>​	从图中可以看出当前系统是<em>Windows</em>，<em>bash</em>中的是<em>Linux</em>系统。下面是安装<em>WSL</em>的方法：</p>
+
+<h3 id="安装步骤">安装步骤</h3>
+
+<p>首先系统必须是<em>Win10</em>，而且版本需要在1607以上(我的是1703). 关于如何查看自己电脑系统的版本：<em>设置–系统–关于</em>，就能看到自己的<em>Windows</em>版本了。如果系统很久没更新了，我推荐使用<em>Windows</em>官网的系统升级软件<a href="http://go.microsoft.com/fwlink/?LinkId=691209">易升</a>。</p>
+
+<p><img src="https://pic1.zhimg.com/v2-830b95686cde605084b110cfe7cfbaf8_b.png" alt="" /></p>
+
+<p>然后需要开启开发者模式，这个在 <em>设置–更新和安全–针对开发人员</em>中。</p>
+
+<p><img src="https://pic1.zhimg.com/v2-2b2e6439e33068c37037e04fe72de444_b.png" alt="" /></p>
+
+<p>接着开启<em>Windows</em>功能中的<em>WSL</em>，这个在 控制面板–程序–打开或关闭<em>Windows</em>功能。</p>
+
+<p><img src="https://pic4.zhimg.com/v2-57772276bd30e0872687a9dfbac3a6a7_b.png" alt="" /></p>
+
+<p>搞好这些东西之后就可以开始安装<em>Ubuntu</em>了。打开<em>powershell</em>，输入<em>bash</em>，然后输入<em>y</em>确定安装即可。</p>
+
+<p><img src="https://pic1.zhimg.com/v2-c9731d9d7222b8812d73aa64233089f0_b.png" alt="" /></p>
+
+<p>之后就是设置用户名和密码了。我这里推荐使用英文的用户名。然后就可以愉快的体验<em>Linux</em>了。</p>
+
+<p><em>Windows</em>是挂载在<em>/mnt</em>下的，所以在<em>bash</em>中可以访问<em>Windows</em>中的文件(除了部分需要一定权限的目录或文件)。</p>
+
+<p>关于更多功能请参考<a href="https://zhuanlan.zhihu.com/p/24537874">简明的WSL教程</a>。上面内容参考了该文章，且使用部分图片。</p>
+
+<h3 id="界面美观">界面美观</h3>
+
+<p><em>Windows</em>下无论是<em>powershell</em>还是<em>cmd都</em>很丑，下面我介绍一下我自己的配置方法。</p>
+
+<p>首先更换字体，我从<a href="https://be5invis.github.io/Iosevka/inziu.html">这里</a>下载了知乎<em>B</em>大设计的字体(个人觉得还不错)，然后将这些字体加入到<em>控制面板–外观和个性化–字体</em>(就是把字体文件直接拖动到里面)。之后在<em>powershell</em>上右键设置。这个比较简单就不写了。<em>Ubuntu**的背景色是</em>RGB(40,0,30)。</p>
+
+
+
+                <hr>
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2017/05/15/Some-Thought/" data-toggle="tooltip" data-placement="top" title="一点感想">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<div id="disqus_thread" style="width:80%;margin-left:auto;margin-right:auto;"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://dogloving.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <!-- kill the Facebook and Weibo -->
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+                    
+                    <!--
+                    
+                    -->
+
+                    <!--
+                    
+                    -->
+
+                    
+                    <!--
+                    
+                    -->
+
+                </ul>
+                <p class="copyright text-muted">
+                &copy; 2017  Tony ❖ Powered by Jekyll.
+                </p>
+            </div>
+        </div>
+    </div>
+	<span id="/2017/06/jekyll-Github-Pages-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-%E5%B9%B6%E5%AE%9E%E7%8E%B0%E8%AF%84%E8%AE%BA-%E9%98%85%E8%AF%BB%E9%87%8F-%E4%BB%A5%E5%8F%8A%E5%88%86%E7%B1%BB%E5%8A%9F%E8%83%BD/" class="leancloud_visitors" data-flag-title="jekyll Github Pages 博客搭建 并实现评论 阅读量 以及分类功能" style="position:absolute;width:100%;text-align:center;font-size:1em;">
+	<span class="post-meta-item-text"> 网站总访问量:  </span>
+	<span class="leancloud-visitors-count"></span>
+	</span>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/clean-blog.min.js "></script>
+
+<!-- Highlight.js -->
+<script>
+    async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js",function(){
+        hljs.initHighlightingOnLoad();
+    })
+</script>
+<link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+<div class="cb-search-tool" style="position: fixed; top: 0px ; bottom: 0px; left: 0px; right:  0px;
+      opacity: 0.95; background-color: #111111; z-index: 9999; display: none;">
+    <input type="text" class="form-control cb-search-content" id="cb-search-content" style="position: fixed; top: 60px" placeholder="文章标题 日期 标签" >
+
+    <div style="position: fixed; top: 16px; right: 16px;">
+        <img src="/search/img/cb-close.png"  id="cb-close-btn"/>
+    </div>
+</div>
+
+<div style="position: fixed; right: 16px; bottom: 20px;">
+    <img src="/search/img/cb-search.png"  id="cb-search-btn"  title="双击ctrl试一下"/
+</div>
+
+<link rel="stylesheet" href="/search/css/cb-search.css">
+
+<script src="/search/js/bootstrap3-typeahead.min.js"></script>
+<script src="/search/js/cb-search.js"></script>
+	
+
+
+    <script id="dsq-count-scr" src="//dogloving.disqus.com/count.js" async></script>
+</body>
+
+</html>

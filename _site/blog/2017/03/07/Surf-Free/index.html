@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+<script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+<script>AV.initialize("n9H2t3VFwwMPqC0rSYfvlJuu-gzGzoHsz", "DkeWUHsd9YIYIsnKRg6vw1Lk");</script>
+<!--<script>console.log("Error: " + error.code + " " + error.message);</script>-->
+<script>
+    function showHitCount(Counter) {
+        console.log("i was called");
+        var query = new AV.Query(Counter);
+        var entries = [];
+        var $visitors = $(".leancloud_visitors");
+        $visitors.each(function () {
+            entries.push( $(this).attr("id").trim() );
+        });
+        query.containedIn('url', entries);
+        query.find()
+                .done(function (results) {
+                    console.log("results",results);
+                    var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+                    if (results.length === 0) {
+                        $visitors.find(COUNT_CONTAINER_REF).text(0);
+                        return;
+                    }
+                    for (var i = 0; i < results.length; i++) {
+                        var item = results[i];
+                        var url = item.get('url');
+                        var hits = item.get('hits');
+                        var element = document.getElementById(url);
+                        $(element).find(COUNT_CONTAINER_REF).text(hits);
+                    }
+                    for(var i = 0; i < entries.length; i++) {
+                        var url = entries[i];
+                        var element = document.getElementById(url);
+                        var countSpan = $(element).find(COUNT_CONTAINER_REF);
+                        if( countSpan.text() == '') {
+                            countSpan.text(0);
+                        }
+                    }
+                })
+                .fail(function (object, error) {
+                    console.log("Error: " + error.code + " " + error.message);
+                });
+    }
+    function addCount(Counter) {
+        var $visitors = $(".leancloud_visitors");
+        var url = $visitors.attr('id').trim();
+        var title = $visitors.attr('data-flag-title').trim();
+        var query = new AV.Query(Counter);
+        query.equalTo("url", url);
+        query.find({
+            success: function(results) {
+                if (results.length > 0) {
+                    var counter = results[0];
+                    counter.fetchWhenSave(true);
+                    counter.increment("hits");
+                    counter.save(null, {
+                        success: function(counter) {
+                            var $element = $(document.getElementById(url));
+                            $element.find('.leancloud-visitors-count').text(counter.get('hits'));
+                        },
+                        error: function(counter, error) {
+                            console.log('Failed to save Visitor num, with error message: ' + error.message);
+                        }
+                    });
+                } else {
+                    var newcounter = new Counter();
+                    /* Set ACL */
+                    var acl = new AV.ACL();
+                    acl.setPublicReadAccess(true);
+                    acl.setPublicWriteAccess(true);
+                    newcounter.setACL(acl);
+                    /* End Set ACL */
+                    newcounter.set("title", title);
+                    newcounter.set("url", url);
+                    newcounter.set("hits", 1);
+                    newcounter.save(null, {
+                        success: function(newcounter) {
+                            var $element = $(document.getElementById(url));
+                            $element.find('.leancloud-visitors-count').text(newcounter.get('hits'));
+                        },
+                        error: function(newcounter, error) {
+                            console.log('Failed to create');
+                        }
+                    });
+                }
+            },
+            error: function(error) {
+                console.log('Error:' + error.code + " " + error.message);
+            }
+        });
+    }
+    $(function() {
+        var Counter = AV.Object.extend("Counter");
+        console.log('this is a test');
+        console.log('this is a test-add',$('.leancloud_visitors'));
+        console.log('this is a test-show',$('.post-link'));
+        if ($('.leancloud_visitors').length == 1) {
+            // in post.html, so add 1 to hit counts
+            addCount(Counter);
+        } else if ($('.post-link').length > 1){
+            // in index.html, there are many 'leancloud_visitors' and 'post-link', so just show hit counts.
+            showHitCount(Counter);
+        }
+    });
+</script>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+
+
+    <!--友言-->
+    <meta name="uyan_auth" content="2a3762da1e" />
+
+    <title>利用IPv6实现校园内免费上网 - Tony's Garden</title>
+
+    <link rel="canonical" href="http://dogloving/blog/2017/03/07/Surf-Free/">
+
+    <!-- Icons -->
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/clean-blog.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+	
+	<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	
+	<!-- jQuery -->
+	<script src="//cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+
+
+
+
+
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Tony's Garden</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">首页</a>
+                </li>
+                
+                <li>
+                    <a href="/about/">关于</a>
+                </li>
+                
+                <li>
+                    <a href="/archive/">所有文章</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('/img/background.jpg')
+    }
+</style>
+<header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="Tags">
+                        
+                        <a class="tag" href="/Tags/#教程" title="教程">教程</a>
+                        
+                    </div>
+                    <h1>利用IPv6实现校园内免费上网</h1>
+                    
+                    <span class="meta">Posted by Tony on March 7, 2017</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-container">
+
+                <p>现在很多高校都有IPv6，而且对于IPv6的流量是不计费的。那么我们可不可以利用这一点来节省我们的网费呢？
+首先学校用网关控制我们的上网，我们在校内的所有用校园网的行为都会受到监控（所以不要用内网做坏事:-&gt;）。那么我们想的是使经过网关的流量是IPv6流量。所以想到一个办法是在外面搭一个同时具有IPv6和IPv4能力的服务器。这个服务器的作用是将外部IPv4流量转成IPv6流量，然后将IPv6流量发给我们的电脑，这样我们就实现了免费上网。具体怎么做呢？</p>
+
+<h1 id="一-有一台属于自己的vps服务器">一 有一台属于自己的VPS服务器</h1>
+<p>我购买的是<a href="https://bandwagonhost.com/">搬瓦工</a>的服务器，一个月$2.99,折算成人民币20块钱出头。我网上也有看到一个更便宜的<a href="https://hostus.us">HostUs</a>,最便宜只要$5.95/quater,但是不知道怎么付款（忧伤）。</p>
+
+<h1 id="二-配置自己的服务器">二 配置自己的服务器</h1>
+<p>到<i>Services-My Services</i>中点击<i>KiwiVM Control Panel</i>。然后选择<i>Install new OS</i>(注意安装新的操作系统之前先stop原来的操作系统)，选择<i>Ubuntu</i>的最新版本安装就行(注意安装好后系统会给你自动生成一个密码，记住它)。安装好之后去下载个<a href="https://putty.en.softonic.com/">Putty</a>。打开PuTTY,输入你服务器的IP地址、端口号，并且选择SSH，保存，然后点击Open就能远程访问你的服务器了。<i>login as:</i>输入root就行，然后输入密码。进去之后大概长这样：
+<img src="/img/fq/vps.png" alt="" />
+接着开始安装环境。依次输入下列命令
+<code>
+apt-get updata
+apt-get install python-pip
+pip install shadowsocks
+</code>
+安装好后开始进行配置,输入<i>vi /etc/shadowsocks.json</i>,然后开始编辑这个文件。首先按一下i表示insert，然后将下面内容复制进去</p>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"server"</span><span class="p">:</span><span class="s2">"::"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"server_port"</span><span class="p">:</span><span class="mi">8388</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"local_address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"127.0.0.1"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"local_port"</span><span class="p">:</span><span class="mi">1080</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"password"</span><span class="p">:</span><span class="s2">"你自己来设置密码"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"timeout"</span><span class="p">:</span><span class="mi">300</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"method"</span><span class="p">:</span><span class="s2">"aes-256-cfb"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"fast_open"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+<p>复制进去之后按下esc,然后输入<i>:wq</i>(write quit的意思),这样就保存好了。</p>
+
+<h1 id="三-启动shadowsocks服务">三 启动shadowsocks服务</h1>
+<p>现在我们打开KiwiVM控制面板，点下<i>Root shell basic</i>,在里面输入<i>ssserver -c /etc/shadowsocks.json start
+</i>表示启动shadowsocks服务。现在我们去下载个shadowsocks的客户端，<a href="https://shadowsocks.org/en/download/clients.html">下载地址</a>
+安装好之后点击添加，输入你的服务器IP地址、服务器端口、密码(不是你服务器的密码，而是你后来自己设置的shadowsocks密码)，选择加密方式为<i>aes-25+6-cfb</i>，点击确定。然后右键图标点击启用系统代理。ok，现在<big>能看Youtube视频了!!!</big></p>
+
+<h1 id="四-最后一步">四 最后一步</h1>
+<p>咦，貌似我们忘了最初的目的—实现免费上网！ok，现在回到KiwiVM界面，点击<i>IPv6 Addresses</i>，添加一个IPv6地址，添加之后重新start一下。然后把这个IPv6的地址替换shadowsocks中的之前的IPv4的地址，现在终于可以真正免费上网了。</p>
+
+<h1 id="更新">更新</h1>
+
+<p>这几天不知道为什么shadosocks崩了，上不了网。查看日志发现报错“由于目标计算机积极拒绝，无法连接”。在网上找到解决方案：将之前的端口号8388改为其他端口，改成443之后果然又能重新上网了。因为代理端口一般都是8388，容易被阻断。</p>
+
+
+                <hr>
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/blog/2017/02/25/ReactNative/" data-toggle="tooltip" data-placement="top" title="安装React-Native">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/blog/2017/03/27/NodeJSSpider/" data-toggle="tooltip" data-placement="top" title="NodeJS爬虫">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<div id="disqus_thread" style="width:80%;margin-left:auto;margin-right:auto;"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://dogloving.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <!-- kill the Facebook and Weibo -->
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+                    
+                    <!--
+                    
+                    -->
+
+                    <!--
+                    
+                    -->
+
+                    
+                    <!--
+                    
+                    -->
+
+                </ul>
+                <p class="copyright text-muted">
+                &copy; 2017  Tony ❖ Powered by Jekyll.
+                </p>
+            </div>
+        </div>
+    </div>
+	<span id="/2017/06/jekyll-Github-Pages-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-%E5%B9%B6%E5%AE%9E%E7%8E%B0%E8%AF%84%E8%AE%BA-%E9%98%85%E8%AF%BB%E9%87%8F-%E4%BB%A5%E5%8F%8A%E5%88%86%E7%B1%BB%E5%8A%9F%E8%83%BD/" class="leancloud_visitors" data-flag-title="jekyll Github Pages 博客搭建 并实现评论 阅读量 以及分类功能" style="position:absolute;width:100%;text-align:center;font-size:1em;">
+	<span class="post-meta-item-text"> 网站总访问量:  </span>
+	<span class="leancloud-visitors-count"></span>
+	</span>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/clean-blog.min.js "></script>
+
+<!-- Highlight.js -->
+<script>
+    async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js",function(){
+        hljs.initHighlightingOnLoad();
+    })
+</script>
+<link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+<div class="cb-search-tool" style="position: fixed; top: 0px ; bottom: 0px; left: 0px; right:  0px;
+      opacity: 0.95; background-color: #111111; z-index: 9999; display: none;">
+    <input type="text" class="form-control cb-search-content" id="cb-search-content" style="position: fixed; top: 60px" placeholder="文章标题 日期 标签" >
+
+    <div style="position: fixed; top: 16px; right: 16px;">
+        <img src="/search/img/cb-close.png"  id="cb-close-btn"/>
+    </div>
+</div>
+
+<div style="position: fixed; right: 16px; bottom: 20px;">
+    <img src="/search/img/cb-search.png"  id="cb-search-btn"  title="双击ctrl试一下"/
+</div>
+
+<link rel="stylesheet" href="/search/css/cb-search.css">
+
+<script src="/search/js/bootstrap3-typeahead.min.js"></script>
+<script src="/search/js/cb-search.js"></script>
+	
+
+
+    <script id="dsq-count-scr" src="//dogloving.disqus.com/count.js" async></script>
+</body>
+
+</html>

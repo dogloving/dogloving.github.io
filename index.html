@@ -1,12 +1,13 @@
 ---
 layout: page
-description: "Tony"
+description: "快乐"
+header-img: "img/dog.jpg"
 ---
 
 {% for post in paginator.posts %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">            
+        <h2 class="post-title">        
             {{ post.title }}
         </h2>
         {% if post.subtitle %}
@@ -39,10 +40,3 @@ description: "Tony"
     {% endif %}
 </ul>
 {% endif %}
-
-<?php 
-    $ip = $_SERVER["REMOTE_ADDR"];
-    $file = fopen("iptxt.txt", "a+");
-    fwrite($file, $ip);
-    $file.close();
- ?>

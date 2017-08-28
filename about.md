@@ -1,18 +1,14 @@
 ---
 layout: page
-title: "About"
-description: "个人简介"
+title: "关于"
+description: "简单 乐观 奋斗 专注"
 header-img: "img/dog.jpg"
 ---
 
+南开大学软件工程本科生。
 
-<center>
-    <p><img src="http://7xlfkx.com1.z0.glb.clouddn.com/white2.jpg" align="center"></p>
-</center>
+[知乎](https://www.zhihu.com/people/tonyhjp/activities)
 
-欢迎访问我的github <a href="https://github.com/dogloving" style="color:#00ff00">点击这里</a>
+[github](https://github.com/dogloving)
 
-
-
-
-
+![](/img/wechat.jpg)

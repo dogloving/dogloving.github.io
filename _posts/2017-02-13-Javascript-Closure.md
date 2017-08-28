@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: Javascript中的闭包
 date: 2017-2-13
 categories: blog

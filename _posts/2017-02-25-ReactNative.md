@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 安装React-Native
 date: 2017-2-25
 categories: blog

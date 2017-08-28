@@ -1,10 +1,10 @@
 # Site settings
 title: Tony's Garden
-header-img: "img/green.jpg"
+header-img: "img/dog.jpg"
 tagline: "cn"  
 description: ""  
 baseurl: ""
-url: "http://dogloving"  
+url: "http://dogloving"
 
 # About/contact
 owner: 
@@ -44,15 +44,12 @@ defaults:
     values:
       layout: "post"
       author: "Tony"
-      header-img: "img/green.jpg" # We don't want posts without a header image, that whould mean white on white
+      header-img: "img/background.jpg" # We don't want posts without a header image, that whould mean white on white
 encoding: UTF-8
-# Comments 
-comments :
-  provider : duoshuo
-  duoshuo :
-    short_name : 
-  disqus :
-      short_name : 
+
+# Comment 这是disqus的评论系统
+comment:
+    disqus: dogloving
 
 # Analytics and webmaster tools stuff goes here
 google_analytics: 
@@ -61,3 +58,9 @@ google_verify:
 bing_verify:
 
 # Links to include in footer navigation
+
+#Counter
+leancloud:
+  enable: true
+  app_id: 1nipKIQNLscMKtqyPPxXIX6n-gzGzoHsz
+  app_key: bYonnk1f5f74aeINRyYdYUdI

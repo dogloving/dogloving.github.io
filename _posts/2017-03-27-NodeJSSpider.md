@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: NodeJS爬虫
 date: 2017-03-27
 categories: blog

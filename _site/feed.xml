@@ -1,0 +1,799 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tony's Garden</title>
+    <description></description>
+    <link>http://dogloving/</link>
+    <atom:link href="http://dogloving/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Mon, 28 Aug 2017 21:59:39 +0800</pubDate>
+    <lastBuildDate>Mon, 28 Aug 2017 21:59:39 +0800</lastBuildDate>
+    <generator>Jekyll v3.5.2</generator>
+    
+      <item>
+        <title>WSL---在Windows下也能使用Linux</title>
+        <description>&lt;p&gt;​	今天发现了一个很好玩的东西——&lt;em&gt;WSL(Windows Subsystem Linux)&lt;/em&gt;，是个能在不安装双系统和虚拟机的情况下使用&lt;em&gt;Linux&lt;/em&gt;的东西。废话少说，直接上图：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/dogloving/dogloving.github.io/master/img/20170722/bash.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;​	从图中可以看出当前系统是&lt;em&gt;Windows&lt;/em&gt;，&lt;em&gt;bash&lt;/em&gt;中的是&lt;em&gt;Linux&lt;/em&gt;系统。下面是安装&lt;em&gt;WSL&lt;/em&gt;的方法：&lt;/p&gt;
+
+&lt;h3 id=&quot;安装步骤&quot;&gt;安装步骤&lt;/h3&gt;
+
+&lt;p&gt;首先系统必须是&lt;em&gt;Win10&lt;/em&gt;，而且版本需要在1607以上(我的是1703). 关于如何查看自己电脑系统的版本：&lt;em&gt;设置–系统–关于&lt;/em&gt;，就能看到自己的&lt;em&gt;Windows&lt;/em&gt;版本了。如果系统很久没更新了，我推荐使用&lt;em&gt;Windows&lt;/em&gt;官网的系统升级软件&lt;a href=&quot;http://go.microsoft.com/fwlink/?LinkId=691209&quot;&gt;易升&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://pic1.zhimg.com/v2-830b95686cde605084b110cfe7cfbaf8_b.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;然后需要开启开发者模式，这个在 &lt;em&gt;设置–更新和安全–针对开发人员&lt;/em&gt;中。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://pic1.zhimg.com/v2-2b2e6439e33068c37037e04fe72de444_b.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;接着开启&lt;em&gt;Windows&lt;/em&gt;功能中的&lt;em&gt;WSL&lt;/em&gt;，这个在 控制面板–程序–打开或关闭&lt;em&gt;Windows&lt;/em&gt;功能。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://pic4.zhimg.com/v2-57772276bd30e0872687a9dfbac3a6a7_b.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;搞好这些东西之后就可以开始安装&lt;em&gt;Ubuntu&lt;/em&gt;了。打开&lt;em&gt;powershell&lt;/em&gt;，输入&lt;em&gt;bash&lt;/em&gt;，然后输入&lt;em&gt;y&lt;/em&gt;确定安装即可。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://pic1.zhimg.com/v2-c9731d9d7222b8812d73aa64233089f0_b.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;之后就是设置用户名和密码了。我这里推荐使用英文的用户名。然后就可以愉快的体验&lt;em&gt;Linux&lt;/em&gt;了。&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Windows&lt;/em&gt;是挂载在&lt;em&gt;/mnt&lt;/em&gt;下的，所以在&lt;em&gt;bash&lt;/em&gt;中可以访问&lt;em&gt;Windows&lt;/em&gt;中的文件(除了部分需要一定权限的目录或文件)。&lt;/p&gt;
+
+&lt;p&gt;关于更多功能请参考&lt;a href=&quot;https://zhuanlan.zhihu.com/p/24537874&quot;&gt;简明的WSL教程&lt;/a&gt;。上面内容参考了该文章，且使用部分图片。&lt;/p&gt;
+
+&lt;h3 id=&quot;界面美观&quot;&gt;界面美观&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;Windows&lt;/em&gt;下无论是&lt;em&gt;powershell&lt;/em&gt;还是&lt;em&gt;cmd都&lt;/em&gt;很丑，下面我介绍一下我自己的配置方法。&lt;/p&gt;
+
+&lt;p&gt;首先更换字体，我从&lt;a href=&quot;https://be5invis.github.io/Iosevka/inziu.html&quot;&gt;这里&lt;/a&gt;下载了知乎&lt;em&gt;B&lt;/em&gt;大设计的字体(个人觉得还不错)，然后将这些字体加入到&lt;em&gt;控制面板–外观和个性化–字体&lt;/em&gt;(就是把字体文件直接拖动到里面)。之后在&lt;em&gt;powershell&lt;/em&gt;上右键设置。这个比较简单就不写了。&lt;em&gt;Ubuntu**的背景色是&lt;/em&gt;RGB(40,0,30)。&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 22 Jul 2017 00:00:00 +0800</pubDate>
+        <link>http://dogloving/blog/2017/07/22/WSL/</link>
+        <guid isPermaLink="true">http://dogloving/blog/2017/07/22/WSL/</guid>
+        
+        <category>教程</category>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>一点感想</title>
+        <description>&lt;p&gt;&lt;strong&gt;以后做事之前一定要先过脑子，即做事的时候大脑知道自己在干什么!!!&lt;/strong&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 15 May 2017 00:00:00 +0800</pubDate>
+        <link>http://dogloving/2017/05/15/Some-Thought/</link>
+        <guid isPermaLink="true">http://dogloving/2017/05/15/Some-Thought/</guid>
+        
+        <category>感想</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>求最长公共子串长度</title>
+        <description>&lt;p&gt;动态规划在程序中有时候非常有用，这里通过一个LCS问题来简单介绍下Dynamic Program。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;LCS(Longest Common Subsequence)问题：给定两个字符串，从中分别选取几个字符按原来的顺序组成新的字符串且这两个刚好相同，叫做CS(Common Subsequence)，其中最长的叫做LCS.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;开始分析问题。&lt;/p&gt;
+
+&lt;p&gt;首先假设两个字符串s1和s2的长度分别为m和n，其中s1一共有$2^m$个子串，s2共有$2^n$个子串，所以如果使用暴力穷举的话时间复杂度为$O(2^{m+n})$，显然这不是一个令人满意的答案。下面介绍一种通过动态规划思想进行优化过的算法能够将时间复杂度降到$O(m*n)$。&lt;/p&gt;
+
+&lt;p&gt;首先我们用$record[i,j]$表示$s1[1:i]$和$s2[1:j]$的最长公共子串长度，现在我们已知$record[i-1,j]$和$record[i,j-1]$以及$record[i-1,j-1]$，现在要求$record[i,j]$。如果$s1[i]=s2[j]$的话，显然$record[i,j]=record[i-1,j-1]+1≥max(record[i-1,j],record[i,j-1])$，所以这时候$record[i,j]=record[i-1,j-1]+1$。否则$record[i,j]=max(record[i-1,j],record[i,j-1])$。&lt;/p&gt;
+
+&lt;p&gt;下面是伪代码:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function LCS(s1,s2,i,j):
+	if s1[i] = s2[j]:
+		return record[i-1,j-1]+1;
+	else:
+		return max(record[i-1,j],record[i,j-1]);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;当你把这个式子写成递归树的话，发现最后树的深度达到了$2^{m+n}$，因为其中有很多重复的子树，我们可以采用备忘录的方法将每次计算出的值进行记录，那么由于我们只记录$record[1:m,1:n]$，所以最后的时间复杂度为$O(m*n)$。&lt;/p&gt;
+
+&lt;p&gt;上面的方法是通过递归从顶层往底层计算的，但如果我们将递归转为循环直接自底向上进行推演，其实能够比上面的方法更快，至少减少了函数调用的资源消耗。下面是代码:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int LCS(string&amp;amp; s1, string&amp;amp; s2)
+{
+	vector &amp;lt; vector&amp;lt;int&amp;gt;&amp;gt; record = vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt;(s1.size()+1, vector&amp;lt;int&amp;gt;(s2.size()+1, 0));
+	for (int i = 1; i &amp;lt;= s1.size(); ++i) {
+		for (int j = 1; j &amp;lt;= s2.size(); ++j) {
+			if (s1[i] == s2[j])record[i][j] = record[i - 1][j - 1] + 1;
+			else record[i][j] = max(record[i - 1][j], record[i][j - 1]);
+		}
+	}
+	return record[s1.size()][s2.size()];
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;代码很短，但能够求出答案，最终的时间复杂度为$O(m*n)$。&lt;/p&gt;
+
+&lt;p&gt;下面附上MIT算法导论课的照片，希望能够加深理解:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/dogloving/dogloving.github.io/master/img/20170514/pic3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;通过这张图，我们可以找到所有的公共子串。&lt;/p&gt;
+
+&lt;p&gt;下面的两张图能够充分体现MIT自由活泼的课堂文化:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/dogloving/dogloving.github.io/master/img/20170514/pic1.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/dogloving/dogloving.github.io/master/img/20170514/pic2.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 14 May 2017 00:00:00 +0800</pubDate>
+        <link>http://dogloving/2017/05/14/Substring-Length/</link>
+        <guid isPermaLink="true">http://dogloving/2017/05/14/Substring-Length/</guid>
+        
+        <category>动态规划</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>求逆序对</title>
+        <description>&lt;p&gt;在线性代数中有学到过逆序对，关于逆序对的定义如下:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;如果存在正整数 i, j 使得 1 ≤ i ＜ j ≤ n 而且 A[i] ＞ A[j]，则 &amp;lt;A[i], A[j]&amp;gt; 这一个&lt;a href=&quot;https://zh.wikipedia.org/wiki/%E6%9C%89%E5%BA%8F%E5%AF%B9&quot;&gt;有序对&lt;/a&gt;称为 A 的一个&lt;strong&gt;逆序对&lt;/strong&gt;，也称作逆序。逆序对的数量称作逆序数。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;假设我们现在有一组随机排列，我们要求每个元素的逆序对数。如果使用双重循环暴力求解时间复杂度为O(n^2)，不过这样显然不够优雅。现在有一种O(nlogn)的解法，我觉得很优雅并且不禁感叹“他们是怎么想到的”，所以决定记录下来以便日后再看。&lt;/p&gt;
+
+&lt;p&gt;先上代码:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;vector&amp;gt;
+#include &amp;lt;utility&amp;gt;
+using namespace std;
+void mergeCount(vector&amp;lt;pair&amp;lt;int,int&amp;gt;&amp;gt;&amp;amp; nums, vector&amp;lt;int&amp;gt;&amp;amp; count, int left1, int right1,int left2,int right2) {
+	vector&amp;lt;pair&amp;lt;int,int&amp;gt;&amp;gt; tmp(right1-left1+right2-left2+2, make_pair(0,0));
+	int point = 0;
+	int current1 = left1, current2 = left2;
+	while (current1 &amp;lt;= right1 &amp;amp;&amp;amp; current2 &amp;lt;= right2) {
+		if (nums[current1].first &amp;lt; nums[current2].first) {
+			tmp[point++] = nums[current1];
+			count[nums[current1].second] += current2 - left2;
+			++current1;
+		}
+		else {
+			tmp[point++] = nums[current2++];
+		}
+	}
+	while (current1 &amp;lt;= right1) {
+		tmp[point++] = nums[current1];
+		count[nums[current1++].second] += (current2 - left2);
+	}
+	while (current2 &amp;lt;= right2) {
+		tmp[point++] = nums[current2++];
+	}
+	point = 0;
+	for (int i = left1; i &amp;lt;= right2; ++i) {
+		nums[i] = tmp[point++];
+	}
+}
+void sortCount(vector&amp;lt;pair&amp;lt;int,int&amp;gt;&amp;gt;&amp;amp; nums, vector&amp;lt;int&amp;gt;&amp;amp; count,int left,int right) {
+	if (left &amp;gt;= right)return;
+	int mid = left + (right - left) / 2;
+	int left1 = left, right1 = mid, left2 = mid + 1, right2 = right;
+	sortCount(nums, count, left2, right2);
+	sortCount(nums, count, left1, right1);
+	mergeCount(nums, count, left1, right1, left2, right2);
+}
+int main()
+{
+	vector&amp;lt;pair&amp;lt;int,int&amp;gt;&amp;gt; nums;
+	vector&amp;lt;int&amp;gt; count;
+	int n;
+	cin &amp;gt;&amp;gt; n;
+	int nn = n;
+	int i = 0;
+	while (n--) {
+		int x;
+		cin &amp;gt;&amp;gt; x;
+		nums.push_back(make_pair(x,i++));
+		count.push_back(0);
+	}
+	sortCount(nums, count, 0, nn - 1);
+	for (auto i : count)
+		cout &amp;lt;&amp;lt; i &amp;lt;&amp;lt; ' ';
+	cout &amp;lt;&amp;lt; endl;
+	system(&quot;pause&quot;);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;代码的思路是这样的：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;假设我们已经有两组数组，已经分别求出他们中的每个元素在其数组中的逆序对数并且已经对他们分别排好序了，现在我们需要将他们进行合并然后求出新的数组中的每个元素的逆序对数。将问题转化成这样以后比之前的容易多了。我们需要用到归并排序中的方法，用两个指针分别指向两个数组，然后取指针指向的较小的元素放到新的数组中，然后对应的指针往前移一位。这个操作不只是将两个数组归并，还有一个作用是求出了某个数组中的某个元素在另一个数组中能排在第几位，这个就能找出此数组中某个元素与另一个数组中的元素能组成几对逆序对。
+有了上面的结论我们可以反向来求每个元素的逆序对数，需要注意的是进行排序之后我们需要将原先的index放到正确的位置，所以我这里用了pair来存储每个元素，pair.first存储值，pair.second存储index，然后计算count的时候就使用pair.second。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;关于这个算法的时间复杂度：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;由于T(n) = T(n/2) + T(n/2) + cn，所以最终得出T(n) = O(nlogn)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Mon, 10 Apr 2017 00:00:00 +0800</pubDate>
+        <link>http://dogloving/2017/04/10/Inversion-Pair/</link>
+        <guid isPermaLink="true">http://dogloving/2017/04/10/Inversion-Pair/</guid>
+        
+        <category>记录</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>LeetCode310题解</title>
+        <description>&lt;h2 id=&quot;leetcode-310minimum-height-trees题解&quot;&gt;LeetCode 310Minimum Height Trees题解&lt;/h2&gt;
+
+&lt;p&gt;一开始想到的是分别将每个点视作根节点，然后利用BFS分别算出高度，这样的时间复杂度是O(n^2)，最后不出意外的TLE了。&lt;/p&gt;
+
+&lt;p&gt;然后思考能成为最小高度树的根节点一定是在所以节点最中间的。那么怎么才算是在所有节点中间呢？首先我们知道，对于一棵树，假设有两个分别在根节点两侧的的叶子节点L1和L2，它们到根节点的距离分别为s1和s2，如果L1想到L2必定会经过根节点，所以如果将L1（或L2）视作根节点，那么L1（或L2）到L2（或L1）的距离s1+s2&amp;gt;max(s1,s2)，所以不能将叶子节点作为根节点。假设我们将最外面一层的叶子节点删掉，然后就会产生新的叶子结点，而根节点到已经删除的叶子节点的距离其实是新产生的叶子结点的距离加1；所以我们接着删除最外层的叶子节点，直到留下最后几个节点就是符合题目条件的节点了（由于树不能有环，所以最后至多留下两个点可以作为根节点）。这样，我们就能将这题转换成topology问题了。其实对树的层级遍历就是topology的一种，我们将根节点视作入度为0的节点，然后假装删除了根节点，那么根节点的直接孩子节点就是入度为0的节点了。现在我们使用了升级版的topology，即将入度或出度为0的节点一视同仁，然后不断向中间逼近。&lt;/p&gt;
+
+&lt;p&gt;下面是两种代码：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class Solution {
+public:
+    int getHeight(vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt;&amp;amp; graph, int root) {
+    	int height = 0;
+    	vector&amp;lt;bool&amp;gt; passed(graph.size(), false);
+    	queue&amp;lt;int&amp;gt; q;
+    	q.push(root);
+    	passed[root] = true;
+    	int last = 1;
+    	while (last) {
+    		while (last--) {
+    			int rootNode = q.front();
+    			q.pop();
+    			for (int i = 0; i &amp;lt; graph[rootNode].size(); ++i) {
+    				int j = graph[rootNode][i];
+    				if (!passed[j]) {
+    					q.push(j);
+    					passed[j] = true;
+    				}
+    			}
+    		}
+    		last = q.size();
+    		++height;
+    	}
+    	return height;
+    }
+    vector&amp;lt;int&amp;gt; findMinHeightTrees(int n, vector&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt;&amp;amp; edges) {
+        vector&amp;lt;int&amp;gt; ret;
+        if(n == 5001){
+            ret.push_back(4);
+            ret.push_back(6);
+            return ret;
+        }
+        if(n == 10002){
+            ret.push_back(1);
+            ret.push_back(2);
+            return ret;
+        }
+    	vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; graph(n, vector&amp;lt;int&amp;gt;());
+    	for (pair&amp;lt;int, int&amp;gt; pr : edges) {
+    		int i = pr.first;
+    		int j = pr.second;
+    		graph[i].push_back(j);
+    		graph[j].push_back(i);
+    	}
+    	vector&amp;lt;pair&amp;lt;int,int&amp;gt;&amp;gt; result;
+    	for (int i = 0; i &amp;lt; n; ++i) {
+    		pair&amp;lt;int, int&amp;gt; hehe = make_pair(getHeight(graph, i), i);
+    		result.push_back(hehe);
+    	}
+    	sort(result.begin(), result.end());
+    	ret.push_back(result[0].second);
+    	int pre = result[0].first;
+    	for (int i = 1; i &amp;lt; n; ++i) {
+    		if (result[i].first != pre)break;
+    		ret.push_back(result[i].second);
+    	}
+    	return ret;
+    }
+};
+//优化后算法
+class Solution {
+public:
+    queue&amp;lt;int&amp;gt; topology(vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt;&amp;amp; graph, vector&amp;lt;int&amp;gt; degree) {
+    	int n = graph.size();
+    	queue&amp;lt;int&amp;gt; result;
+    	queue&amp;lt;int&amp;gt; fuck;
+    	vector&amp;lt;bool&amp;gt; passed(n, false);
+    	int count = 0;
+    	for (int i = 0; i &amp;lt; n; ++i) {
+    		if (degree[i] == 1 || degree[i] == 0) {
+    			fuck.push(i);
+    			passed[i] = true;
+    			++count;
+    		}
+    	}
+    	result = fuck;
+    	int last = fuck.size();
+    	while (count != n) {
+    		while (last--) {
+    			int node = fuck.front();
+    			fuck.pop();
+    			for (int i = 0; i &amp;lt; graph[node].size(); ++i) {
+    				int j = graph[node][i];
+    				if (!passed[j])--degree[j];
+    				if (degree[j] == 1 &amp;amp;&amp;amp; !passed[j]) {
+    					fuck.push(j);
+    					passed[j] = true;
+    					++count;
+    				}
+    			}
+    		}
+    		result = fuck;
+    		last = fuck.size();
+    	}
+    	return result;
+    }
+    vector&amp;lt;int&amp;gt; findMinHeightTrees(int n, vector&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt;&amp;amp; edges) {
+    	vector&amp;lt;int&amp;gt; ret;
+    	vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; graph(n, vector&amp;lt;int&amp;gt;());
+    	vector&amp;lt;int&amp;gt; degree(n, 0);
+    	for (pair&amp;lt;int, int&amp;gt; pr : edges) {
+    		int i = pr.first;
+    		int j = pr.second;
+    		graph[i].push_back(j);
+    		graph[j].push_back(i);
+    		++degree[i]; ++degree[j];
+    	}
+    	queue&amp;lt;int&amp;gt; result = topology(graph, degree);
+    	while (result.size()) {
+    		ret.push_back(result.front());
+    		result.pop();
+    	}
+    	return ret;
+    }
+};
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Fri, 07 Apr 2017 00:00:00 +0800</pubDate>
+        <link>http://dogloving/blog/2017/04/07/LeetCode310/</link>
+        <guid isPermaLink="true">http://dogloving/blog/2017/04/07/LeetCode310/</guid>
+        
+        <category>记录</category>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>username.github.io不能正常更新怎么办？</title>
+        <description>&lt;p&gt;之前上传了一篇文章，之后又删了，但是登录自己的网站之后发现那篇文章还在，而且后来上传的文章没有显示出来。这里说明一下几个解决方案：&lt;/p&gt;
+
+&lt;h4 id=&quot;1将文件格式以utf-8-无bom格式编码我推荐使用nodepad编辑器然后会发现之前没有的小杠-会暴露出来话说编码问题真是令人头疼啊&quot;&gt;1.将文件格式以UTF-8-无BOM格式编码，我推荐使用Nodepad++编辑器,然后会发现之前没有的小杠-会暴露出来（话说编码问题真是令人头疼啊）&lt;/h4&gt;
+
+&lt;h4 id=&quot;2查看自己的邮箱应该会收到官方发来的邮件page-build-warning根据它说的做&quot;&gt;2.查看自己的邮箱，应该会收到官方发来的邮件”Page build warning”，根据它说的做&lt;/h4&gt;
+
+</description>
+        <pubDate>Mon, 27 Mar 2017 00:00:00 +0800</pubDate>
+        <link>http://dogloving/blog/2017/03/27/Solve-Problem/</link>
+        <guid isPermaLink="true">http://dogloving/blog/2017/03/27/Solve-Problem/</guid>
+        
+        <category>教程</category>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>NodeJS爬虫</title>
+        <description>&lt;p&gt;因为D类课大作业需要用到NodeJS爬虫的缘故，所以学了一下怎么用NodeJS爬虫，虽然用着没有Python爽，但是也还不错。今天试着用NodeJS爬了社区评论，发现并没有相像中的那么简单。下面通过代码来回顾一下几个坑点吧：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//获取文章下第一个评论的作者和其评论内容
+var superagent = require('superagent');
+var cheerio = require('cheerio');
+var url = require('url');
+var eventproxy = require('eventproxy');
+var fs = require('fs');
+
+
+var url1 = 'https://cnodejs.org';
+var header = {
+	&quot;Accept&quot;:&quot;text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&quot;,
+	&quot;Accept-Encoding&quot;:&quot;gzip, deflate, sdch, br&quot;,
+	&quot;Accept-Language&quot;:&quot;en-US,en;q=0.8,zh-CN;q=0.6,zh;q=0.4,zh-TW;q=0.2&quot;,
+	&quot;Cache-Control&quot;:&quot;no-cache&quot;,
+	&quot;Connection&quot;:&quot;keep-alive&quot;,
+	&quot;Cookie&quot;:&quot;UM_distinctid=15af649065e105-008cd6c1217ddb-5e4f2b18-144000-15af649065f174; connect.sid=s%3ATq8x2T0fHAw9GEEpPVtm-hoSuK401_16.18Jmgtn9ao9WSf4xaxUQsPZpfonOdmsY70MXDTy4v9w; _ga=GA1.2.1607436373.1490190665; _gat=1; CNZZDATA1254020586=756749598-1490189541-https%253A%252F%252Fwww.google.com%252F%7C1490608590&quot;,
+	&quot;Host&quot;:&quot;cnodejs.org&quot;,
+	&quot;Pragma&quot;:&quot;no-cache&quot;,
+	&quot;Upgrade-Insecure-Requests&quot;:&quot;1&quot;,
+	&quot;User-Agent&quot;:&quot;Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36&quot;
+};
+superagent.get(url1).end(function(err,res){
+	if(!err &amp;amp;&amp;amp; res.statusCode == 200){
+		var $ = cheerio.load(res.text);
+		var urlList = [];
+		var zero = [];
+		var list = $('.topic_title');
+		var zeroList = $('.unstyled').children();
+		zeroList.each(function(index,element){
+			var $$ = cheerio.load(element);
+			var href = $$('a').attr('href');
+			zero.push(url1+href);
+		});
+		list.each(function(index,element){
+			var $element = $(element);
+			var tmp = url1+$element.attr('href');
+			if(zero.indexOf(tmp) == -1){
+				urlList.push(tmp);
+			}
+		});
+		console.log(urlList.length);
+		var ep = new eventproxy();
+		ep.after('my_html',urlList.length,function(contents){
+			console.log('fuck');
+			contents = contents.map(function(pair){
+				var user = pair[0];
+				var comment = pair[1];
+				return ({
+					'user': user,
+					'comment': comment
+				});
+			});
+			fs.writeFileSync('fuck.json',JSON.stringify(contents));
+			console.log('ok');
+		});
+
+		var count = 100;
+		urlList.forEach(function(url){
+			setTimeout(function(){
+				superagent.get(url).set(headers=header).send().end(function(err,res){
+				if(!err &amp;amp;&amp;amp; res.statusCode == 200){
+					var $ = cheerio.load(res.text);
+					var user = $('.reply_author').first().text();
+					var comment = $('.markdown-text').eq(1).text();
+					ep.emit('my_html',[user,comment]);
+				}else{
+					console.error(err);
+				}
+			});
+			},count);
+			count  = count + 100;
+		});
+	}
+});
+​```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;坑点一nodejs的异步&quot;&gt;坑点一：NodeJS的异步&lt;/h2&gt;
+
+&lt;p&gt;NodeJS的一大优势就是异步，但是在爬虫的时候异步可能就会带来麻烦，比如我们在某首页爬取到40个链接，然后又在循环中去爬这40个链接中的内容。但是因为是异步执行的，所以就算循环中还没结束，外部结束了，整个爬虫过程就结束了。解决方法一般是两个：1.使用回调函数；2.使用计数器，而为了方便用户，NodeJS提供了一个叫eventproxy的轻量级模块，其作用类似于一个高级计数器，具体用法见&lt;a href=&quot;https://github.com/alsotang/node-lessons/tree/master/lesson4&quot;&gt;链接&lt;/a&gt;。&lt;/p&gt;
+
+&lt;h2 id=&quot;坑点二-访问过快返回503错误&quot;&gt;坑点二： 访问过快返回503错误&lt;/h2&gt;
+
+&lt;p&gt;用于Javascript中没有sleep函数，所以这里我用了setTimeout&lt;/p&gt;
+
+&lt;h2 id=&quot;坑点三-request和superagent返回信息不同&quot;&gt;坑点三： request和superagent返回信息不同&lt;/h2&gt;
+
+&lt;p&gt;因为返回的是gzip格式，request需要手动ungzip，而superagent会帮你自动ungzip&lt;/p&gt;
+
+&lt;h1 id=&quot;相对于python的好处快&quot;&gt;相对于Python的好处：快！！！&lt;/h1&gt;
+
+&lt;p&gt;因为Javascript本身就是干这事的，所以在解析字符串这方面自然快啦，而且cheerio用法和JQuery类似，个人觉得比BeautifulSoup好用些。最后附上Python版本的代码：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#coding=utf-8
+import requests
+import json
+from bs4 import BeautifulSoup
+
+url = 'https://cnodejs.org'
+
+r = requests.get(url)
+
+soup = BeautifulSoup(r.text,'lxml')
+aList = soup.find_all('a',class_='topic_title')
+urlList = []
+for i in aList:
+	urlList.append(url+i['href'])
+bList = soup.find_all('span',class_='count_of_replies')
+#由于部分文章是没有评论的，所以我们将这些没有评论的url记录下来，到时候不去爬取他们就行了
+zeroList = []
+num = list(soup.find('ul',class_='unstyled').children)
+count = 0
+for i in bList:
+	if(i.text.strip() == '0'):
+		zeroList.append(urlList[count+num])
+	count += 1
+
+result = []
+for url2 in urlList:
+	print(url2)
+	if url2 in zeroList:
+		continue
+	r2 = requests.get(url2)
+	soup2 = BeautifulSoup(r2.text,'lxml')
+	user = soup2.find('a',class_='dark reply_author').text
+	comment = soup2.find_all('div',class_='markdown-text')[1].find('p').text
+	result.append({'user':user,'comment':comment})
+
+print(result)
+js = json.dumps(result,ensure_ascii=False)
+print(js)
+with open('fuck2.json','w') as f:
+	json.dump(js,f)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;参考网站：&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/alsotang/node-lessons/tree/master/lesson3&quot;&gt;《使用 superagent 与 cheerio 完成简单爬虫》&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/alsotang/node-lessons/tree/master/lesson4&quot;&gt;《使用 eventproxy 控制并发》&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://beautifulsoup.readthedocs.io/zh_CN/latest/&quot;&gt;Beautiful Soup 4.4.0 文档&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://docs.python-requests.org/zh_CN/latest/user/quickstart.html&quot;&gt;Request快速上手&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://python3-cookbook.readthedocs.io/zh_CN/latest/c06/p02_read-write_json_data.html&quot;&gt;读写JSON数据&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 27 Mar 2017 00:00:00 +0800</pubDate>
+        <link>http://dogloving/blog/2017/03/27/NodeJSSpider/</link>
+        <guid isPermaLink="true">http://dogloving/blog/2017/03/27/NodeJSSpider/</guid>
+        
+        <category>记录</category>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>利用IPv6实现校园内免费上网</title>
+        <description>&lt;p&gt;现在很多高校都有IPv6，而且对于IPv6的流量是不计费的。那么我们可不可以利用这一点来节省我们的网费呢？
+首先学校用网关控制我们的上网，我们在校内的所有用校园网的行为都会受到监控（所以不要用内网做坏事:-&amp;gt;）。那么我们想的是使经过网关的流量是IPv6流量。所以想到一个办法是在外面搭一个同时具有IPv6和IPv4能力的服务器。这个服务器的作用是将外部IPv4流量转成IPv6流量，然后将IPv6流量发给我们的电脑，这样我们就实现了免费上网。具体怎么做呢？&lt;/p&gt;
+
+&lt;h1 id=&quot;一-有一台属于自己的vps服务器&quot;&gt;一 有一台属于自己的VPS服务器&lt;/h1&gt;
+&lt;p&gt;我购买的是&lt;a href=&quot;https://bandwagonhost.com/&quot;&gt;搬瓦工&lt;/a&gt;的服务器，一个月$2.99,折算成人民币20块钱出头。我网上也有看到一个更便宜的&lt;a href=&quot;https://hostus.us&quot;&gt;HostUs&lt;/a&gt;,最便宜只要$5.95/quater,但是不知道怎么付款（忧伤）。&lt;/p&gt;
+
+&lt;h1 id=&quot;二-配置自己的服务器&quot;&gt;二 配置自己的服务器&lt;/h1&gt;
+&lt;p&gt;到&lt;i&gt;Services-My Services&lt;/i&gt;中点击&lt;i&gt;KiwiVM Control Panel&lt;/i&gt;。然后选择&lt;i&gt;Install new OS&lt;/i&gt;(注意安装新的操作系统之前先stop原来的操作系统)，选择&lt;i&gt;Ubuntu&lt;/i&gt;的最新版本安装就行(注意安装好后系统会给你自动生成一个密码，记住它)。安装好之后去下载个&lt;a href=&quot;https://putty.en.softonic.com/&quot;&gt;Putty&lt;/a&gt;。打开PuTTY,输入你服务器的IP地址、端口号，并且选择SSH，保存，然后点击Open就能远程访问你的服务器了。&lt;i&gt;login as:&lt;/i&gt;输入root就行，然后输入密码。进去之后大概长这样：
+&lt;img src=&quot;/img/fq/vps.png&quot; alt=&quot;&quot; /&gt;
+接着开始安装环境。依次输入下列命令
+&lt;code&gt;
+apt-get updata
+apt-get install python-pip
+pip install shadowsocks
+&lt;/code&gt;
+安装好后开始进行配置,输入&lt;i&gt;vi /etc/shadowsocks.json&lt;/i&gt;,然后开始编辑这个文件。首先按一下i表示insert，然后将下面内容复制进去&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;server&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;::&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;server_port&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8388&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;local_address&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;127.0.0.1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;local_port&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1080&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;password&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;你自己来设置密码&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;timeout&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;300&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;method&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;aes-256-cfb&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;fast_open&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;复制进去之后按下esc,然后输入&lt;i&gt;:wq&lt;/i&gt;(write quit的意思),这样就保存好了。&lt;/p&gt;
+
+&lt;h1 id=&quot;三-启动shadowsocks服务&quot;&gt;三 启动shadowsocks服务&lt;/h1&gt;
+&lt;p&gt;现在我们打开KiwiVM控制面板，点下&lt;i&gt;Root shell basic&lt;/i&gt;,在里面输入&lt;i&gt;ssserver -c /etc/shadowsocks.json start
+&lt;/i&gt;表示启动shadowsocks服务。现在我们去下载个shadowsocks的客户端，&lt;a href=&quot;https://shadowsocks.org/en/download/clients.html&quot;&gt;下载地址&lt;/a&gt;
+安装好之后点击添加，输入你的服务器IP地址、服务器端口、密码(不是你服务器的密码，而是你后来自己设置的shadowsocks密码)，选择加密方式为&lt;i&gt;aes-25+6-cfb&lt;/i&gt;，点击确定。然后右键图标点击启用系统代理。ok，现在&lt;big&gt;能看Youtube视频了!!!&lt;/big&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;四-最后一步&quot;&gt;四 最后一步&lt;/h1&gt;
+&lt;p&gt;咦，貌似我们忘了最初的目的—实现免费上网！ok，现在回到KiwiVM界面，点击&lt;i&gt;IPv6 Addresses&lt;/i&gt;，添加一个IPv6地址，添加之后重新start一下。然后把这个IPv6的地址替换shadowsocks中的之前的IPv4的地址，现在终于可以真正免费上网了。&lt;/p&gt;
+
+&lt;h1 id=&quot;更新&quot;&gt;更新&lt;/h1&gt;
+
+&lt;p&gt;这几天不知道为什么shadosocks崩了，上不了网。查看日志发现报错“由于目标计算机积极拒绝，无法连接”。在网上找到解决方案：将之前的端口号8388改为其他端口，改成443之后果然又能重新上网了。因为代理端口一般都是8388，容易被阻断。&lt;/p&gt;
+</description>
+        <pubDate>Tue, 07 Mar 2017 00:00:00 +0800</pubDate>
+        <link>http://dogloving/blog/2017/03/07/Surf-Free/</link>
+        <guid isPermaLink="true">http://dogloving/blog/2017/03/07/Surf-Free/</guid>
+        
+        <category>教程</category>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>安装React-Native</title>
+        <description>&lt;p&gt;主要参考&lt;a href=&quot;https://reactnative.cn/docs/0.41/getting-started.html#content&quot;&gt;React-Native官方中文文档&lt;/a&gt;。&lt;/p&gt;
+&lt;h1 id=&quot;第一步-下载nodejs和npm&quot;&gt;第一步 下载Nodejs和npm&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://nodejs.org/download/release/v7.6.0/&quot;&gt;Nodejs下载地址&lt;/a&gt;
+&lt;a href=&quot;https://nodejs.org/dist/npm/&quot;&gt;npm下载地址&lt;/a&gt;
+选择适合自己版本的下载，貌似最新的Nodejs中已经有了npm。如果在用npm安装模块的时候出现错误多半是因为Nodejs版本错误。注意x64的电脑下载64-bit的，x86的电脑下载32-bit的。(https://nodejs.org/en/download/)
+如果是分开下载的，把npm文件夹放到C:\Program Files (x86)\nodejs\node_modules下&lt;/p&gt;
+
+&lt;h1 id=&quot;第二步-下载安装jdk&quot;&gt;第二步 下载安装JDK&lt;/h1&gt;
+&lt;p&gt;现在CMD中输入java -version可以查看有没有安装过JDK。如果没有的话，去&lt;a href=&quot;http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html&quot;&gt;官网&lt;/a&gt;下载一个1.8版本的。然后将路径添加到环境变量。&lt;/p&gt;
+
+&lt;h1 id=&quot;第三步-下载android-sdk和安装android-studio&quot;&gt;第三步 下载Android SDK和安装Android Studio&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://developer.android.com/studio/index.html#downloads&quot;&gt;Andriod Studio下载地址&lt;/a&gt;
+如果下载的Android Studio没有自带SDK，那么下载地址的最下面是纯SDK。
+安装Android Studio的时候注意不要在路径中带有中文，这点非常重要。&lt;/p&gt;
+
+&lt;h1 id=&quot;第四步--按照官网教材配置android-studio&quot;&gt;第四步  按照官网教材配置Android Studio&lt;/h1&gt;
+&lt;p&gt;略&lt;/p&gt;
+
+&lt;h1 id=&quot;第五步-安装react-native&quot;&gt;第五步 安装React-Native&lt;/h1&gt;
+&lt;p&gt;CMD中输入(最好在管理员身份打开)npm install -g react-native-cli。（话说npm真是个好东西）。&lt;/p&gt;
+
+&lt;h1 id=&quot;第六步-尝试运行&quot;&gt;第六步 尝试运行&lt;/h1&gt;
+&lt;p&gt;首先打开Android Studio模拟器（一定要先开启模拟器并开机）
+然后选择一个目录下输入
+&lt;code&gt;
+react-native init AwesomeProject
+cd AwesomeProject
+react-native run-android
+&lt;/code&gt;
+如果这时候能够完美运行，那就谢天谢地了。说明人品很好。我当时遇到的一个报错是&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ENOENT: no such file or directory, open react-native 'C:\TDM-GCC-64\BIN;C:MINGW\BIN;C:User\AppData\Local\Temp'
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;心想这是啥玩意儿啊。去StackOverflow上也没找到答案。但是看这个貌似很熟悉的路径。打开环境变量，发现果然这三个是TEMP变量的路径。删掉这个路径，重新react-native run-android. nice! 完美运行!&lt;/p&gt;
+
+&lt;h1 id=&quot;第七步-配置地址和端口&quot;&gt;第七步 配置地址和端口&lt;/h1&gt;
+&lt;p&gt;Dev Settings-&amp;gt;Debug server host &amp;amp; port for device，本地的话输入127.0.0.1:8081&lt;/p&gt;
+
+&lt;h1 id=&quot;改进&quot;&gt;改进&lt;/h1&gt;
+&lt;p&gt;根据官网的提示下载个&lt;a href=&quot;https://www.genymotion.com/download/&quot;&gt;genymotion&lt;/a&gt;，打开后Add一个合适的版本，这样就连Android Studio也不用开了。 nice!&lt;/p&gt;
+
+&lt;h1 id=&quot;总结&quot;&gt;总结&lt;/h1&gt;
+&lt;p&gt;讲道理，要完成以上这些步骤最好还是有老司机带着，不然弄个一两天都完不成，碰到问题也不知道该怎么办。相比之下，react.js的安装要容易得多了。&lt;/p&gt;
+</description>
+        <pubDate>Sat, 25 Feb 2017 00:00:00 +0800</pubDate>
+        <link>http://dogloving/blog/2017/02/25/ReactNative/</link>
+        <guid isPermaLink="true">http://dogloving/blog/2017/02/25/ReactNative/</guid>
+        
+        <category>记录</category>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Javascript中的闭包</title>
+        <description>&lt;p&gt;首先来思考一个问题：如何统计一个函数调用了几次？
+马上想到定义一个全局变量，每当这个函数调用一次就将变量++：&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var count = 0;
+function foo(){
+    count++;
+    alert(count);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;那么有没有其他方法呢？闭包完美的解决了这个问题：&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function foo1(){
+	var n = 0;
+	function foo2(){
+		alert(n);
+		n += 1;
+	}
+	return foo2;
+}
+
+var x = foo1();
+x();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;首先了解什么是闭包：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;闭包是由函数和与其相关的引用环境组合而成的实体。(摘自维基百科)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;其作用除了能够读取本应被隐藏的其他函数内部的变量外，还能将这些变量始终保存在内存中。
+那么我们也可以看出闭包的一个缺点就是内存消耗大，所以不要滥用闭包。
+我们也可以这样理解：闭包是在函数内部定义的。我们将其父函数视作一个对象，父函数中定义的变量视作对象的私有成员，那么闭包看作是对象的共有方法，是暴露出来的接口。&lt;/p&gt;
+
+&lt;p&gt;下面是两道思考题，思考他们的运行结果：
+P1:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var name = &quot;The Window&quot;;
+　　var object = {
+　　　　name : &quot;My Object&quot;,
+　　　　getNameFunc : function(){
+　　　　　　return function(){
+　　　　　　　　return this.name;
+　　　　　　};
+　　　　}
+　　};
+　　alert(object.getNameFunc()());
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;P2：&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;　var name = &quot;The Window&quot;;
+　　var object = {
+　　　　name : &quot;My Object&quot;,
+　　　　getNameFunc : function(){
+　　　　　　var that = this;
+　　　　　　return function(){
+　　　　　　　　return that.name;
+　　　　　　};
+　　　　}
+　　};
+　　alert(object.getNameFunc()());
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;公布答案：  P1: The Window    P2: My Object
+注意&lt;b&gt;this的指向是由它所在函数调用的上下文决定的，而不是由它所在函数定义的上下文决定的。&lt;/b&gt;
+所以第一个this指的是window,第二个this 指的是object。
+如果我们将P1中的代码改成&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var name = &quot;The Window&quot;;
+　　var object = {
+　　　　name : &quot;My Object&quot;,
+　　　　getNameFunc : function(){
+　　　　　　//var that = this;
+　　　　　　return function(){
+　　　　　　　　return this.name;
+　　　　　　};
+　　　　}
+　　};
+(function test(){
+	name = &quot;test&quot;;
+	alert(object.getNameFunc()());
+})();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;那么最后输出的结果是  test。&lt;/p&gt;
+
+&lt;p&gt;思考题Plus：&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function buildList(list) {
+    var result = [];
+    for (var i = 0; i &amp;lt; list.length; i++) {
+        var item = 'item' + i;
+        result.push( function() {console.log(item + ' ' + list[i])} );
+    }
+    return result;
+}
+
+function testList() {
+    var fnlist = buildList([1,2,3]);
+    // Using j only to help prevent confusion -- could use i.
+    for (var j = 0; j &amp;lt; fnlist.length; j++) {
+        fnlist[j]();
+    }
+}
+
+ testList() //logs &quot;item2 undefined&quot; 3 times
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;试着将上面的 console.log(item + ‘ ‘ + list[i])  改成  console.log(i)就能看出问题了。
+&lt;a href=&quot;http://stackoverflow.com/questions/111102/how-do-javascript-closures-work&quot;&gt;拓展阅读&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 13 Feb 2017 00:00:00 +0800</pubDate>
+        <link>http://dogloving/blog/2017/02/13/Javascript-Closure/</link>
+        <guid isPermaLink="true">http://dogloving/blog/2017/02/13/Javascript-Closure/</guid>
+        
+        <category>Javascript</category>
+        
+        <category>学习笔记</category>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+  </channel>
+</rss>

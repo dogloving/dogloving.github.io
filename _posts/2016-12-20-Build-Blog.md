@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 免费搭建博客教程
 date: 2016-12-20
 categories: blog

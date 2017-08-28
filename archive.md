@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "Archive"
-description: "我的文章"
+title: "所有文章"
+description: "有趣 真诚"
 header-img: "img/dog.jpg"
 ---
 

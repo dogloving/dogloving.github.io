@@ -91,6 +91,10 @@
             </div>
         </div>
     </div>
+	<span id="/2017/06/jekyll-Github-Pages-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-%E5%B9%B6%E5%AE%9E%E7%8E%B0%E8%AF%84%E8%AE%BA-%E9%98%85%E8%AF%BB%E9%87%8F-%E4%BB%A5%E5%8F%8A%E5%88%86%E7%B1%BB%E5%8A%9F%E8%83%BD/" class="leancloud_visitors" data-flag-title="jekyll Github Pages 博客搭建 并实现评论 阅读量 以及分类功能" style="position:absolute;width:100%;text-align:center;font-size:1em;">
+	<span class="post-meta-item-text"> 网站总访问量:  </span>
+	<span class="leancloud-visitors-count"></span>
+	</span>
 </footer>
 
 <!-- jQuery -->
@@ -102,13 +106,29 @@
 <!-- Custom Theme JavaScript -->
 <script src="{{ "/js/clean-blog.min.js " | prepend: site.baseurl }}"></script>
 
-
-
 <!-- Highlight.js -->
 <script>
     async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js",function(){
         hljs.initHighlightingOnLoad();
     })
 </script>
-<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261655444'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1261655444' type='text/javascript'%3E%3C/script%3E"));</script>
 <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+<div class="cb-search-tool" style="position: fixed; top: 0px ; bottom: 0px; left: 0px; right:  0px;
+      opacity: 0.95; background-color: #111111; z-index: 9999; display: none;">
+    <input type="text" class="form-control cb-search-content" id="cb-search-content" style="position: fixed; top: 60px" placeholder="文章标题 日期 标签" >
+
+    <div style="position: fixed; top: 16px; right: 16px;">
+        <img src="/search/img/cb-close.png"  id="cb-close-btn"/>
+    </div>
+</div>
+
+<div style="position: fixed; right: 16px; bottom: 20px;">
+    <img src="/search/img/cb-search.png"  id="cb-search-btn"  title="双击ctrl试一下"/
+</div>
+
+<link rel="stylesheet" href="{{ "/search/css/cb-search.css" | prepend: site.baseurl }}">
+
+<script src="{{ "/search/js/bootstrap3-typeahead.min.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/search/js/cb-search.js" | prepend: site.baseurl }}"></script>
+	
+
