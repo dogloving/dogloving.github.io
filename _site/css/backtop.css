@@ -1,8 +1,8 @@
 /*  Back Top Button  */
 #back-top {
   position: fixed;
-  bottom: 30px;
-  margin-left: 1040px;
+  bottom: 10px;
+  right: 60px;
 }
 #back-top a {
   width: 54px;
@@ -17,7 +17,8 @@
   -moz-transition: 1s;
   transition: 1s;
 }
-#back-top a:hover {
+#back-top :hover {
   background-color: #777;
+  cursor: pointer;
 }
 /*  Back Top Button  End */

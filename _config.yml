@@ -47,9 +47,6 @@ defaults:
       header-img: "img/background.jpg" # We don't want posts without a header image, that whould mean white on white
 encoding: UTF-8
 
-# Comment 这是disqus的评论系统
-comment:
-    disqus: dogloving
 
 # Analytics and webmaster tools stuff goes here
 google_analytics: 
