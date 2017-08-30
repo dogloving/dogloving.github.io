@@ -5,9 +5,30 @@
     <description></description>
     <link>http://dogloving/</link>
     <atom:link href="http://dogloving/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 29 Aug 2017 09:00:49 +0800</pubDate>
-    <lastBuildDate>Tue, 29 Aug 2017 09:00:49 +0800</lastBuildDate>
+    <pubDate>Wed, 30 Aug 2017 20:02:38 +0800</pubDate>
+    <lastBuildDate>Wed, 30 Aug 2017 20:02:38 +0800</lastBuildDate>
     <generator>Jekyll v3.5.2</generator>
+    
+      <item>
+        <title>近期生活</title>
+        <description>&lt;p&gt;​	前阵子一直在忙暑期实习的项目，最后做出来的&lt;a href=&quot;https://github.com/dogloving/Handsome-Customer-Service&quot;&gt;汉森客服系统&lt;/a&gt;还算可以，虽然它仍然有很多不足。实习期间尽管非常累，但好歹学到了一些东西。&lt;/p&gt;
+
+&lt;p&gt;​	回家躺了几天，算是休整过了，接下来的日子就是干正事了。福利就上高铁上拍的照片和家乡的天空。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/20170830/railway.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/20170830/sky.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 30 Aug 2017 00:00:00 +0800</pubDate>
+        <link>http://dogloving/blog/2017/08/30/Thought/</link>
+        <guid isPermaLink="true">http://dogloving/blog/2017/08/30/Thought/</guid>
+        
+        <category>感想</category>
+        
+        
+        <category>blog</category>
+        
+      </item>
     
       <item>
         <title>WSL---在Windows下也能使用Linux</title>
@@ -56,19 +77,6 @@
         
         
         <category>blog</category>
-        
-      </item>
-    
-      <item>
-        <title>一点感想</title>
-        <description>&lt;p&gt;&lt;strong&gt;以后做事之前一定要先过脑子，即做事的时候大脑知道自己在干什么!!!&lt;/strong&gt;&lt;/p&gt;
-</description>
-        <pubDate>Mon, 15 May 2017 00:00:00 +0800</pubDate>
-        <link>http://dogloving/2017/05/15/Some-Thought/</link>
-        <guid isPermaLink="true">http://dogloving/2017/05/15/Some-Thought/</guid>
-        
-        <category>感想</category>
-        
         
       </item>
     
