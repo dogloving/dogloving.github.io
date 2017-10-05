@@ -92,9 +92,6 @@
     }
     $(function() {
         var Counter = AV.Object.extend("Counter");
-        console.log('this is a test');
-        console.log('this is a test-add',$('.leancloud_visitors'));
-        console.log('this is a test-show',$('.post-link'));
         if ($('.leancloud_visitors').length == 1) {
             // in post.html, so add 1 to hit counts
             addCount(Counter);
@@ -117,7 +114,6 @@
     {{ content }}
 
     {% include footer.html %}
-    <script id="dsq-count-scr" src="//dogloving.disqus.com/count.js" async></script>
 </body>
 
 </html>

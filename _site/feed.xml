@@ -3,10 +3,10 @@
   <channel>
     <title>Tony's Garden</title>
     <description></description>
-    <link>http://dogloving/</link>
-    <atom:link href="http://dogloving/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 30 Aug 2017 20:02:38 +0800</pubDate>
-    <lastBuildDate>Wed, 30 Aug 2017 20:02:38 +0800</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Thu, 05 Oct 2017 12:30:57 +0800</pubDate>
+    <lastBuildDate>Thu, 05 Oct 2017 12:30:57 +0800</lastBuildDate>
     <generator>Jekyll v3.5.2</generator>
     
       <item>
@@ -20,8 +20,8 @@
 &lt;p&gt;&lt;img src=&quot;/img/20170830/sky.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 30 Aug 2017 00:00:00 +0800</pubDate>
-        <link>http://dogloving/blog/2017/08/30/Thought/</link>
-        <guid isPermaLink="true">http://dogloving/blog/2017/08/30/Thought/</guid>
+        <link>http://localhost:4000/blog/2017/08/30/Thought/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2017/08/30/Thought/</guid>
         
         <category>感想</category>
         
@@ -70,8 +70,8 @@
 
 </description>
         <pubDate>Sat, 22 Jul 2017 00:00:00 +0800</pubDate>
-        <link>http://dogloving/blog/2017/07/22/WSL/</link>
-        <guid isPermaLink="true">http://dogloving/blog/2017/07/22/WSL/</guid>
+        <link>http://localhost:4000/blog/2017/07/22/WSL/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2017/07/22/WSL/</guid>
         
         <category>教程</category>
         
@@ -137,8 +137,8 @@
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/dogloving/dogloving.github.io/master/img/20170514/pic2.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 14 May 2017 00:00:00 +0800</pubDate>
-        <link>http://dogloving/2017/05/14/Substring-Length/</link>
-        <guid isPermaLink="true">http://dogloving/2017/05/14/Substring-Length/</guid>
+        <link>http://localhost:4000/2017/05/14/Substring-Length/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/05/14/Substring-Length/</guid>
         
         <category>动态规划</category>
         
@@ -233,8 +233,8 @@ int main()
 
 </description>
         <pubDate>Mon, 10 Apr 2017 00:00:00 +0800</pubDate>
-        <link>http://dogloving/2017/04/10/Inversion-Pair/</link>
-        <guid isPermaLink="true">http://dogloving/2017/04/10/Inversion-Pair/</guid>
+        <link>http://localhost:4000/2017/04/10/Inversion-Pair/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/04/10/Inversion-Pair/</guid>
         
         <category>记录</category>
         
@@ -373,8 +373,8 @@ public:
 
 </description>
         <pubDate>Fri, 07 Apr 2017 00:00:00 +0800</pubDate>
-        <link>http://dogloving/blog/2017/04/07/LeetCode310/</link>
-        <guid isPermaLink="true">http://dogloving/blog/2017/04/07/LeetCode310/</guid>
+        <link>http://localhost:4000/blog/2017/04/07/LeetCode310/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2017/04/07/LeetCode310/</guid>
         
         <category>记录</category>
         
@@ -393,8 +393,8 @@ public:
 
 </description>
         <pubDate>Mon, 27 Mar 2017 00:00:00 +0800</pubDate>
-        <link>http://dogloving/blog/2017/03/27/Solve-Problem/</link>
-        <guid isPermaLink="true">http://dogloving/blog/2017/03/27/Solve-Problem/</guid>
+        <link>http://localhost:4000/blog/2017/03/27/Solve-Problem/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2017/03/27/Solve-Problem/</guid>
         
         <category>教程</category>
         
@@ -557,8 +557,8 @@ with open('fuck2.json','w') as f:
 &lt;p&gt;&lt;a href=&quot;http://python3-cookbook.readthedocs.io/zh_CN/latest/c06/p02_read-write_json_data.html&quot;&gt;读写JSON数据&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Mon, 27 Mar 2017 00:00:00 +0800</pubDate>
-        <link>http://dogloving/blog/2017/03/27/NodeJSSpider/</link>
-        <guid isPermaLink="true">http://dogloving/blog/2017/03/27/NodeJSSpider/</guid>
+        <link>http://localhost:4000/blog/2017/03/27/NodeJSSpider/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2017/03/27/NodeJSSpider/</guid>
         
         <category>记录</category>
         
@@ -612,8 +612,8 @@ pip install shadowsocks
 &lt;p&gt;这几天不知道为什么shadosocks崩了，上不了网。查看日志发现报错“由于目标计算机积极拒绝，无法连接”。在网上找到解决方案：将之前的端口号8388改为其他端口，改成443之后果然又能重新上网了。因为代理端口一般都是8388，容易被阻断。&lt;/p&gt;
 </description>
         <pubDate>Tue, 07 Mar 2017 00:00:00 +0800</pubDate>
-        <link>http://dogloving/blog/2017/03/07/Surf-Free/</link>
-        <guid isPermaLink="true">http://dogloving/blog/2017/03/07/Surf-Free/</guid>
+        <link>http://localhost:4000/blog/2017/03/07/Surf-Free/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2017/03/07/Surf-Free/</guid>
         
         <category>教程</category>
         
@@ -669,8 +669,8 @@ react-native run-android
 &lt;p&gt;讲道理，要完成以上这些步骤最好还是有老司机带着，不然弄个一两天都完不成，碰到问题也不知道该怎么办。相比之下，react.js的安装要容易得多了。&lt;/p&gt;
 </description>
         <pubDate>Sat, 25 Feb 2017 00:00:00 +0800</pubDate>
-        <link>http://dogloving/blog/2017/02/25/ReactNative/</link>
-        <guid isPermaLink="true">http://dogloving/blog/2017/02/25/ReactNative/</guid>
+        <link>http://localhost:4000/blog/2017/02/25/ReactNative/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2017/02/25/ReactNative/</guid>
         
         <category>记录</category>
         
@@ -791,8 +791,8 @@ function testList() {
 
 </description>
         <pubDate>Mon, 13 Feb 2017 00:00:00 +0800</pubDate>
-        <link>http://dogloving/blog/2017/02/13/Javascript-Closure/</link>
-        <guid isPermaLink="true">http://dogloving/blog/2017/02/13/Javascript-Closure/</guid>
+        <link>http://localhost:4000/blog/2017/02/13/Javascript-Closure/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2017/02/13/Javascript-Closure/</guid>
         
         <category>Javascript</category>
         

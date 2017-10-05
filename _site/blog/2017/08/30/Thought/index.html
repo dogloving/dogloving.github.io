@@ -92,9 +92,6 @@
     }
     $(function() {
         var Counter = AV.Object.extend("Counter");
-        console.log('this is a test');
-        console.log('this is a test-add',$('.leancloud_visitors'));
-        console.log('this is a test-show',$('.post-link'));
         if ($('.leancloud_visitors').length == 1) {
             // in post.html, so add 1 to hit counts
             addCount(Counter);
@@ -112,12 +109,10 @@
     <meta name="description" content="">
 
 
-    <!--友言-->
-    <meta name="uyan_auth" content="2a3762da1e" />
 
     <title>近期生活 - Tony's Garden</title>
 
-    <link rel="canonical" href="http://dogloving/blog/2017/08/30/Thought/">
+    <link rel="canonical" href="http://localhost:4000/blog/2017/08/30/Thought/">
 
     <!-- Icons -->
     <link rel="shortcut icon" href="/img/favicon.ico">
@@ -146,6 +141,7 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
 
 </head>
 
@@ -199,6 +195,10 @@
         background-image: url('/img/background.jpg')
     }
 </style>
+ <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="http://120.25.87.171/JP-Comment/assets/css/comments.css">
 <header class="intro-header" >
     <div class="container">
         <div class="row">
@@ -251,10 +251,39 @@
     </div>
 </article>
 
+<div class="jp-comments" style="display:block;width:100%;margin-top:30px;">
+    <div class="form-horizontal center-class" role="form" style="display:block;width:50%;margin-left:auto;margin-right:auto;">
+    	<div class="form-group has-feedback" style="font-size:2em;">评论(共&nbsp;<span id="jp-count"></span>&nbsp;条)</div>
+        <div class="form-group has-feedback">
+            <div>
+                <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                <input type="text" class="form-control" id="jp-nickname" name="nickname" placeholder="你的昵称" autofocus>
+            </div>
+        </div>
+        <div class="form-group has-feedback">
+            <div>
+                <i></i>
+                <span class="glyphicon glyphicon-globe form-control-feedback"></span>
+                <input type="text" class="form-control" id="jp-site" name="site" placeholder="你的站点">
+            </div>
+        </div>
+        <div class="form-group has-feedback">
+            <div>
+                <i></i>
+                <span class="glyphicon glyphicon-pencil form-control-feedback"></span>
+                <textarea class="form-control" id="jp-content" name="content" placeholder="你的评论" rows="6"></textarea>
+            </div>
+        </div>
+        <button class="btn btn-primary" style="display:block;width:10%;height:5vh;margin-left:auto;margin-right:auto;" id="jp-smt">提交</button>
+    </div>
+    <ul class="list-group" style="display:block;width:50%;margin-left:auto;margin-right:auto;margin-top:30px;" id="jp-cm"></ul>
+</div>
+<script type="text/javascript" src="http://120.25.87.171/JP-Comment/assets/js/comments.js"></script>
 
     <!-- Footer -->
 <link rel="stylesheet" href="/css/backtop.css">  <!-- Back Top -->
 <script type="text/javascript" src="/js/backtop.js"></script>  <!-- Back Top -->
+
 
 <div id="back-top">
   <a href="#top" title="回到顶部"></a>
@@ -297,6 +326,8 @@
             </div>
         </div>
     </div>
+
+    
 	<span id="/2017/06/jekyll-Github-Pages-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-%E5%B9%B6%E5%AE%9E%E7%8E%B0%E8%AF%84%E8%AE%BA-%E9%98%85%E8%AF%BB%E9%87%8F-%E4%BB%A5%E5%8F%8A%E5%88%86%E7%B1%BB%E5%8A%9F%E8%83%BD/" class="leancloud_visitors" data-flag-title="jekyll Github Pages 博客搭建 并实现评论 阅读量 以及分类功能" style="position:absolute;width:100%;text-align:center;font-size:1em;">
 	<span class="post-meta-item-text"> 网站总访问量:  </span>
 	<span class="leancloud-visitors-count"></span>
@@ -339,7 +370,6 @@
 	
 
 
-    <script id="dsq-count-scr" src="//dogloving.disqus.com/count.js" async></script>
 </body>
 
 </html>
