@@ -7,8 +7,8 @@ header-img: "img/dog.jpg"
 
 南开大学软件工程本科生。
 
-[知乎](https://www.zhihu.com/people/tonyhjp/activities)
+[Github](https://github.com/dogloving)
 
-[github](https://github.com/dogloving)
+[LeetCode](https://leetcode.com/tonyhjp/)
 
-![](/img/wechat.jpg)
+[Codewars](https://www.codewars.com/users/dogloving)
